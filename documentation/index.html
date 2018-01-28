@@ -1,1124 +1,1137 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Documentation &mdash; TypicalBot</title>
+    <meta name="description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
+    <meta name="keywords" content="">
 
-<html>
-    <head>
-        <meta charset="utf-8">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://typicalbot.com/">
-		<meta property="og:title" content="TypicalBot – The Ultimate Discord Bot">
-		<meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
-		<meta property="og:site_name" content="TypicalBot">
-        <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
-        <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/x/style.css">
-        <script src="https://use.fontawesome.com/d9402e3b49.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-        <title>Documentation – TypicalBot</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+    <meta name="robots" content="noodp,noydir">
 
-            <div class="collapse navbar-collapse mr-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/documentation">Documentation</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse ml-auto">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
-                </ul>
-            </div>
-        </nav>
+    <meta property="og:description" content="Built upon over a year of experience, TypicalBot is the ironically-named bot that is far from typical.">
+    <!-- These images are generally 1200x630 -->
+    <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
+    <meta property="og:image:width" content="500">
+	<meta property="og:image:height" content="500">
+	<meta property="og:site_name" content="TypicalBot">
+	<meta property="og:title" content="Documentation &mdash; TypicalBot">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://typicalbot.com">
+	<meta property="og:locale" content="en-us">
 
-        <div class="content container docs">
-            <h2 style="text-align: center;" id="ignoretheme">TypicalBot Documentation</h2>
-            <hr class="my-2"><br>
-            <ul class="nav nav-tabs">
-                <li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#fun">Fun</a></li>
-                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#images">Images</a></li>
-                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#moderation">Moderation</a></li>
-                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#utility">Utility</a></li>
-                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#typicalbot">TypicalBot</a></li>
-                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#help">Help</a></li>
-                <span class="ml-auto" id="right">
-                    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#public-roles">Public Roles</a></li>
-                    <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#settings">Settings</a></li>
-                </span>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://typicalbot.com/x/style.css">
+
+    <!-- These images are generally 64x64 -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://typicalbot.com/x/images/icon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="https://typicalbot.com/x/images/icon.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/"><img src="/x/images/icon.png" class="align-top">TypicalBot</a>
+
+        <div class="collapse navbar-collapse mr-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/documentation">Documentation</a>
+                </li>
             </ul>
-            <div class="tab-content">
+        </div>
+        <div class="collapse navbar-collapse ml-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/invite">Add TypicalBot</a></li>
+                <li class="nav-item"><a class="nav-link" href="/join-us">Join the Server</a></li>
+                <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                <!-- TABLE:FUN -->
+    <div class="content container docs">
+        <h2 style="text-align: center;" id="ignoretheme">TypicalBot Documentation</h2>
+        <hr class="my-2"><br>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a data-toggle="tab" class="nav-link active" href="#fun">Fun</a></li>
+            <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#images">Images</a></li>
+            <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#moderation">Moderation</a></li>
+            <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#utility">Utility</a></li>
+            <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#typicalbot">TypicalBot</a></li>
+            <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#help">Help</a></li>
+            <span class="ml-auto" id="right">
+                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#public-roles">Public Roles</a></li>
+                <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#settings">Settings</a></li>
+            </span>
+        </ul>
+        <div class="tab-content">
 
-                <div class="tab-pane show active fade in" id="fun">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>8ball</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$8ball <code id="input">&lt;question&gt;</code></li>
-                                </ul></td>
-                                <td>Ask the magic 8ball a question.</td>
-                            </tr>
-                            <tr>
-                                <td>cookie</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$cookie</li>
-                                    <li>$cookie <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>Give another user a cookie or keep them all for yourself.</td>
-                            </tr>
-                            <tr>
-                                <td>dice</td>
-                                <td><ul>
-                                    <li>die</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$dice</li>
-                                    <li>$dice <code id="input">&lt;number-of-sides&gt;</code></li>
-                                </ul></td>
-                                <td>Roll a n-sided die.</td>
-                            </tr>
-                            <tr>
-                                <td>hug</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$hug <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>'Hug' another user in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>joke</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$joke</li>
-                                </ul></td>
-                                <td>Gives you a random joke.</td>
-                            </tr>
-                            <tr>
-                                <td>punch</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$punch <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>'Punch' another user in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>quote</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$quote</li>
-                                </ul></td>
-                                <td>Gives you a random quote.</td>
-                            </tr>
-                            <tr>
-                                <td>shoot</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$shoot <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>'Shoot' another user in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>slap</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$slap <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>'Slap' another user in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>stab</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$stab <code id="input">&lt;user-mention&gt;</code></li>
-                                </ul></td>
-                                <td>'Stab' another user in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>urban</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$urban <code id="input">&lt;query&gt;</code></li>
-                                </ul></td>
-                                <td>Grabs the definition from Urban Dictionary for the specified word.</td>
-                            </tr>
-                            <tr>
-                                <td>yomama</td>
-                                <td><ul>
-                                    <li>yomomma</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$yomama</li>
-                                </ul></td>
-                                <td>Gives you a random yomama joke.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <!-- TABLE:FUN -->
 
-                <!-- TABLE:IMAGES -->
+            <div class="tab-pane show active fade in" id="fun">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="50%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8ball</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$8ball <code id="input">&lt;question&gt;</code></li>
+                            </ul></td>
+                            <td>Ask the magic 8ball a question.</td>
+                        </tr>
+                        <tr>
+                            <td>cookie</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$cookie</li>
+                                <li>$cookie <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>Give another user a cookie or keep them all for yourself.</td>
+                        </tr>
+                        <tr>
+                            <td>dice</td>
+                            <td><ul>
+                                <li>die</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$dice</li>
+                                <li>$dice <code id="input">&lt;number-of-sides&gt;</code></li>
+                            </ul></td>
+                            <td>Roll a n-sided die.</td>
+                        </tr>
+                        <tr>
+                            <td>hug</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$hug <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>'Hug' another user in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>joke</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$joke</li>
+                            </ul></td>
+                            <td>Gives you a random joke.</td>
+                        </tr>
+                        <tr>
+                            <td>punch</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$punch <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>'Punch' another user in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>quote</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$quote</li>
+                            </ul></td>
+                            <td>Gives you a random quote.</td>
+                        </tr>
+                        <tr>
+                            <td>shoot</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$shoot <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>'Shoot' another user in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>slap</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$slap <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>'Slap' another user in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>stab</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$stab <code id="input">&lt;user-mention&gt;</code></li>
+                            </ul></td>
+                            <td>'Stab' another user in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>urban</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$urban <code id="input">&lt;query&gt;</code></li>
+                            </ul></td>
+                            <td>Grabs the definition from Urban Dictionary for the specified word.</td>
+                        </tr>
+                        <tr>
+                            <td>yomama</td>
+                            <td><ul>
+                                <li>yomomma</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$yomama</li>
+                            </ul></td>
+                            <td>Gives you a random yomama joke.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:IMAGES -->
 
 
-                <div class="tab-pane fade in" id="images">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>bunny</td>
-                                <td><ul>
-                                    <li>rabbit</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$bunny</li>
-                                </ul></td>
-                                <td>Gives you a random bunny picture.</td>
-                            </tr>
-                            <tr>
-                                <td>cat</td>
-                                <td><ul>
-                                    <li>kitty</li>
-                                    <li>kitten</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$cat</li>
-                                </ul></td>
-                                <td>Gives you a random cat picture.</td>
-                            </tr>
-                            <tr>
-                                <td>dog</td>
-                                <td><ul>
-                                    <li>puppy</li>
-                                    <li>doggy</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$dog</li>
-                                </ul></td>
-                                <td>Gives you a random dog picture.</td>
-                            </tr>
-                            <tr>
-                                <td>tiger</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$tiger</li>
-                                </ul></td>
-                                <td>Gives you a random tiger picture.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="tab-pane fade in" id="images">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="50%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>bunny</td>
+                            <td><ul>
+                                <li>rabbit</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$bunny</li>
+                            </ul></td>
+                            <td>Gives you a random bunny picture.</td>
+                        </tr>
+                        <tr>
+                            <td>cat</td>
+                            <td><ul>
+                                <li>kitty</li>
+                                <li>kitten</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$cat</li>
+                            </ul></td>
+                            <td>Gives you a random cat picture.</td>
+                        </tr>
+                        <tr>
+                            <td>dog</td>
+                            <td><ul>
+                                <li>puppy</li>
+                                <li>doggy</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$dog</li>
+                            </ul></td>
+                            <td>Gives you a random dog picture.</td>
+                        </tr>
+                        <tr>
+                            <td>tiger</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$tiger</li>
+                            </ul></td>
+                            <td>Gives you a random tiger picture.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <!-- TABLE:MODERATION -->
+            <!-- TABLE:MODERATION -->
 
-                <div class="tab-pane fade in" id="moderation">
-                    <table class="table table-striped table-hover">
-                        <thead>
+            <div class="tab-pane fade in" id="moderation">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr><td class="tab-note" colspan=4>Usage examples with <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td></tr>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="10%">Permission</th>
+                            <th width="40%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>adcheck</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$adcheck</li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Check if any members of a server have a server invite in their playing status.</td>
+                        </tr>
+                        <tr>
+                            <td>announce</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$announce <code id="input">&lt;content&gt;</code></li>
+                                <li>$announce -e <code id="input">&lt;content&gt;</code></li>
+                            </ul></td>
+                            <td>3</td>
+                            <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make the message an embed. If the announcements mention role is set, it will always use it.</td>
+                        </tr>
+                        <tr>
+                            <td>ban</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$ban <code id="input">&lt;user-mention&gt;</code></li>
+                                <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code></li>
+                                <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                                <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Ban a member from the server.</td>
+                        </tr>
+                        <tr>
+                            <td>ignore</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$ignore commands</li>
+                                <li>$ignore invites</li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Makes the bot ignore commands or invites in a channel.</td>
+                        </tr>
+                        <tr>
+                            <td>kick</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$kick <code id="input">&lt;user-mention&gt;</code></li>
+                                <li>$kick <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Kick a member from the server.</td>
+                        </tr>
+                        <tr>
+                            <td>purge</td>
+                            <td><ul>
+                                <li>prune</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$purge <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge <code id="input">&lt;#channel&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge <code id="input">&lt;@role&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge me <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge you <code id="input">&lt;message-count&gt;</code></li>
+                                <li>$purge bots <code id="input">&lt;message-count&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Purge messages in a channel.</td>
+                        </tr>
+                        <tr>
+                            <td>reason</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$reason latest <code id="input">&lt;reason&gt;</code></li>
+                                <li>$command <code id="input">&lt;case-id&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Change or set a reason for a case in moderation logs.</td>
+                        </tr>
+                        <tr>
+                            <td>roles</td>
+                            <td><ul>
+                                <li>role</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$roles help</li>
+                                <li>$roles list</li>
+                                <li>$roles info[rmation] <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>$roles info[rmation] members <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>$roles give <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                                <li>$roles take <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                                <li>$roles public list</li>
+                                <li>$roles public add <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                                <li>$roles public remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                                <li>$roles public clear<i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                            </ul></td>
+                            <td>0</td>
+                            <td>Manage or list the server's roles or public roles.</td>
+                        </tr>
+                        <tr>
+                            <td>say</td>
+                            <td><ul>
+                                <li>speak</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$say <code id="input">&lt;content&gt;</code></li>
+                                <li>$say <code id="input">&lt;#channel&gt;</code> <code id="input">&lt;content&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Makes the bot send a message with the content used.</td>
+                        </tr>
+                        <tr>
+                            <td>settings</td>
+                            <td><ul>
+                                <li>set</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$settings list</li>
+                                <li>$settings list <code id="input">&lt;page-number&gt;</code></li>
+                                <li>$settings view <code id="input">&lt;setting&gt;</code></li>
+                                <li>$settings edit <code id="input">&lt;setting&gt;</code> <code id="input">&lt;value&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
+                            </ul></td>
+                            <td>0</td>
+                            <td>View or customize your server's settings and enable/disable specific features.</td>
+                        </tr>
+                        <tr>
+                            <td>softban</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$softban <code id="input">&lt;user-mention&gt;</code></li>
+                                <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code></li>
+                                <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                                <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Bans and unbans a member from the server, essentially kicking them and clearing their messages.</td>
+                        </tr>
+                        <tr>
+                            <td>unban</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$unban <code id="input">&lt;user-mention&gt;</code></li>
+                                <li>$unban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Unban a user from the server.</td>
+                        </tr>
+                        <tr>
+                            <td>unignore</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$unignore commands</li>
+                                <li>$unignore invites</li>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Makes the bot unignore commands or invites in a channel.</td>
+                        </tr>
+                        <tr>
+                            <td>warn</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$warn <code id="input">&lt;user-mention&gt;</code></li>
+                                <li>$warn <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
+                            </ul></td>
+                            </ul></td>
+                            <td>2</td>
+                            <td>Warn a member in the server.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:UTILITY -->
+
+            <div class="tab-pane fade in" id="utility">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
                             <tr><td class="tab-note" colspan=4>Usage examples with <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td></tr>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="10%">Permission</th>
-                                <th width="40%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>adcheck</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$adcheck</li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Check if any members of a server have a server invite in their playing status.</td>
-                            </tr>
-                            <tr>
-                                <td>announce</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$announce <code id="input">&lt;content&gt;</code></li>
-                                    <li>$announce -e <code id="input">&lt;content&gt;</code></li>
-                                </ul></td>
-                                <td>3</td>
-                                <td>Send an announcement to the announcements channel. Use the flag '-e' before your content to make the message an embed. If the announcements mention role is set, it will always use it.</td>
-                            </tr>
-                            <tr>
-                                <td>ban</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$ban <code id="input">&lt;user-mention&gt;</code></li>
-                                    <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code></li>
-                                    <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                    <li>$ban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Ban a member from the server.</td>
-                            </tr>
-                            <tr>
-                                <td>ignore</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$ignore commands</li>
-                                    <li>$ignore invites</li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Makes the bot ignore commands or invites in a channel.</td>
-                            </tr>
-                            <tr>
-                                <td>kick</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$kick <code id="input">&lt;user-mention&gt;</code></li>
-                                    <li>$kick <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Kick a member from the server.</td>
-                            </tr>
-                            <tr>
-                                <td>purge</td>
-                                <td><ul>
-                                    <li>prune</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$purge <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge <code id="input">&lt;#channel&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge <code id="input">&lt;@role&gt;</code> <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge me <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge you <code id="input">&lt;message-count&gt;</code></li>
-                                    <li>$purge bots <code id="input">&lt;message-count&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Purge messages in a channel.</td>
-                            </tr>
-                            <tr>
-                                <td>reason</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$reason latest <code id="input">&lt;reason&gt;</code></li>
-                                    <li>$command <code id="input">&lt;case-id&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Change or set a reason for a case in moderation logs.</td>
-                            </tr>
-                            <tr>
-                                <td>roles</td>
-                                <td><ul>
-                                    <li>role</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$roles help</li>
-                                    <li>$roles list</li>
-                                    <li>$roles info[rmation] <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>$roles info[rmation] members <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>$roles give <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                    <li>$roles take <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                    <li>$roles public list</li>
-                                    <li>$roles public add <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                    <li>$roles public remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                    <li>$roles public clear<i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                </ul></td>
-                                <td>0</td>
-                                <td>Manage or list the server's roles or public roles.</td>
-                            </tr>
-                            <tr>
-                                <td>say</td>
-                                <td><ul>
-                                    <li>speak</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$say <code id="input">&lt;content&gt;</code></li>
-                                    <li>$say <code id="input">&lt;#channel&gt;</code> <code id="input">&lt;content&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Makes the bot send a message with the content used.</td>
-                            </tr>
-                            <tr>
-                                <td>settings</td>
-                                <td><ul>
-                                    <li>set</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$settings list</li>
-                                    <li>$settings list <code id="input">&lt;page-number&gt;</code></li>
-                                    <li>$settings view <code id="input">&lt;setting&gt;</code></li>
-                                    <li>$settings edit <code id="input">&lt;setting&gt;</code> <code id="input">&lt;value&gt;</code><i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i></li>
-                                </ul></td>
-                                <td>0</td>
-                                <td>View or customize your server's settings and enable/disable specific features.</td>
-                            </tr>
-                            <tr>
-                                <td>softban</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$softban <code id="input">&lt;user-mention&gt;</code></li>
-                                    <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code></li>
-                                    <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                    <li>$softban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;days-to-purge&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Bans and unbans a member from the server, essentially kicking them and clearing their messages.</td>
-                            </tr>
-                            <tr>
-                                <td>unban</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$unban <code id="input">&lt;user-mention&gt;</code></li>
-                                    <li>$unban <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Unban a user from the server.</td>
-                            </tr>
-                            <tr>
-                                <td>unignore</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$unignore commands</li>
-                                    <li>$unignore invites</li>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Makes the bot unignore commands or invites in a channel.</td>
-                            </tr>
-                            <tr>
-                                <td>warn</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$warn <code id="input">&lt;user-mention&gt;</code></li>
-                                    <li>$warn <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;reason&gt;</code></li>
-                                </ul></td>
-                                </ul></td>
-                                <td>2</td>
-                                <td>Warn a member in the server.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="50%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>bots</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$bots</li>
+                                <li>$bots <code id="input">&lt;page-number&gt;</code></li>
+                            </ul></td>
+                            <td>Gives a list of bots from Carbonitex sorted by server count.</td>
+                        </tr>
+                        <tr>
+                            <td>discriminator</td>
+                            <td><ul>
+                                <li>discrim</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$discriminator</li>
+                                <li>$discriminator <code id="input">&lt;discriminator&gt;</code></li>
+                            </ul></td>
+                            <td>Provides a list of all uers with a given discriminator.</td>
+                        </tr>
+                        <tr>
+                            <td>hex</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$hex random</li>
+                                <li>$hex <code id="input">&lt;hex-code&gt;</code></li>
+                            </ul></td>
+                            <td>Sends a preview of a hex color.</td>
+                        </tr>
+                        <tr>
+                            <td>mylevel</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$mylevel</li>
+                            </ul></td>
+                            <td>Shows you your permission level specific to the server requested it.</td>
+                        </tr>
+                        <tr>
+                            <td>nickname</td>
+                            <td><ul>
+                                <li>nick</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$nickname</li>
+                                <li>$nickname reset</li>
+                                <li>$nickname <code id="input">&lt;desired-nickname&gt;</code></li>
+                                <li>$nickname <code id="input">&lt;user-mention&gt;</code><i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
+                                <li>$nickname <code id="input">&lt;user-mention&gt;</code> reset<i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
+                                <li>$nickname <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;desired-nickname&gt;</code><i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
+                            </ul></td>
+                            <td>Change or clear either your nickname or another user's nickname.</td>
+                        </tr>
+                        <tr>
+                            <td>randomuser</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$randomuser</li>
+                            </ul></td>
+                            <td>Selects a random member in the server.</td>
+                        </tr>
+                        <tr>
+                            <td>search</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$search <code id="input">&lt;query&gt;</code></li>
+                                <li>$search <code id="input">&lt;query&gt;</code> <code id="input">&lt;page-number&gt;</code></li>
+                            </ul></td>
+                            <td>Searches in the user list for a username or nickname.</td>
+                        </tr>
+                        <tr>
+                            <td>serverinfo</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$serverinfo</li>
+                            </ul></td>
+                            <td>Displays the server's information.</td>
+                        </tr>
+                        <tr>
+                            <td>strawpoll</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$strawpoll <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
+                                <li>$strawpoll -m <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
+                            </ul></td>
+                            <td>Create a strawpoll vote. Use the '-m' flag for multiple choice.</td>
+                        </tr>
+                        <tr>
+                            <td>subscribe</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$subscribe</li>
+                            </ul></td>
+                            <td>Subscribe to the server's announcements.</td>
+                        </tr>
+                        <tr>
+                            <td>unsubscribe</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$unsubscribe</li>
+                            </ul></td>
+                            <td>Unsubscribe from the server's announcements.</td>
+                        </tr>
+                        <tr>
+                            <td>userinfo</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$userinfo</li>
+                                <li>$userinfo <code id="input">&lt;user-mention|user-id|user-tag&gt;</code></li>
+                            </ul></td>
+                            <td>Displays a user's information.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:TYPICALBOT -->
+
+            <div class="tab-pane fade in" id="typicalbot">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="50%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>commands</td>
+                            <td><ul>
+                                <li>cmds</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$commands</li>
+                            </ul></td>
+                            <td>Receive a list of TypicalBot's commands.</td>
+                        </tr>
+                        <tr>
+                            <td>documentation</td>
+                            <td><ul>
+                                <li>docs</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$documentation</li>
+                            </ul></td>
+                            <td>Grab a link to TypicalBot's documentation.</td>
+                        </tr>
+                        <tr>
+                            <td>donate</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$donate</li>
+                            </ul></td>
+                            <td>Donate to the cause of TypicalBot.</td>
+                        </tr>
+                        <tr>
+                            <td>help</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$help</li>
+                                <li>$help <code id="input">&lt;command-name&gt;</code></li>
+                            </ul></td>
+                            <td>Get general information about TypicalBot or help with a specific command.</td>
+                        </tr>
+                        <tr>
+                            <td>information</td>
+                            <td><ul>
+                                <li>info</li>
+                            </ul></td>
+                            <td><ul>
+                                <li>$information</li>
+                            </ul></td>
+                            <td>Get general information about TypicalBot.</td>
+                        </tr>
+                        <tr>
+                            <td>invite</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$invite</li>
+                            </ul></td>
+                            <td>Receive the OAuth2 authorization link for TypicalBot.</td>
+                        </tr>
+                        <tr>
+                            <td>ping</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$ping</li>
+                            </ul></td>
+                            <td>A check to see if TypicalBot is able to respond.</td>
+                        </tr>
+                        <tr>
+                            <td>server</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$server</li>
+                            </ul></td>
+                            <td>Receive an invite to the TypicalBot Lounge.</td>
+                        </tr>
+                        <tr>
+                            <td>servers</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$servers</li>
+                                <li>$servers <code id="input">&lt;page-number&gt;</code></li>
+                            </ul></td>
+                            <td>Get a list of servers of the current shard.</td>
+                        </tr>
+                        <tr>
+                            <td>stats</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$stats</li>
+                            </ul></td>
+                            <td>Get TypicalBot's current statistics.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:HELP -->
+
+            <div class="tab-pane fade in" id="help">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="10%">Aliases</th>
+                            <th width="30%">Usage</th>
+                            <th width="50%">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>logs</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$logs</li>
+                            </ul></td>
+                            <td>Sends a help embed in regards to logs.</td>
+                        </tr>
+                        <tr>
+                            <td>perms</td>
+                            <td></td>
+                            <td><ul>
+                                <li>$perms</li>
+                            </ul></td>
+                            <td>Sends a help embed in regards to permissions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:PUBLIC-ROLES -->
+
+            <div class="tab-pane fade in" id="public-roles">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Name</th>
+                            <th width="50%">Description</th>
+                            <th width="30%">Usage</th>
+                            <th width="10%">Permission</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>roles public add</td>
+                            <td>Add a role to the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
+                            <td><ul>
+                                <li>$roles public add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>roles public remove</td>
+                            <td>Remove a role from the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
+                            <td><ul>
+                                <li>$roles public remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>roles public clear</td>
+                            <td>Clear all roles from the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
+                            <td><ul>
+                                <li>$roles public clear</li>
+                            </ul></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>roles public list</td>
+                            <td>List all public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
+                            <td><ul>
+                                <li>$roles public list</li>
+                            </ul></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>give</td>
+                            <td>Receive a role off of the public roles list.</td>
+                            <td><ul>
+                                <li>$give <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>take</td>
+                            <td>Remove a role from you off of the public roles list.</td>
+                            <td><ul>
+                                <li>$take <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLE:SETTINGS -->
+
+            <div class="tab-pane fade in" id="settings">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <tr><td class="tab-note" colspan=4>Use the <code id="input">settings</code> command found under the moderation tab to change these settings.</td></tr>
+                            <th width="10%"></th>
+                            <th width="10%">Setting</th>
+                            <th width="30%">Values</th>
+                            <th width="35%">Description</th>
+                            <th width="5%">Modifiers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Embed</td>
+                            <td>embed</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>Embed responses from TypicalBot.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Administrator Role</td>
+                            <td>adminrole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>clear</li>
+                            </ul></td>
+                            <td>Administrator role that will grant users with the role(s) permission level 3.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Moderator Role</td>
+                            <td>modrole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>clear</li>
+                            </ul></td>
+                            <td>Moderator role that will grant users with the role(s) permission level 2.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>DJ Role</td>
+                            <td>djrole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>clear</li>
+                            </ul></td>
+                            <td>DJ role that will grant users with the role(s) permission level 1.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Blacklist Role</td>
+                            <td>blacklistrole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                                <li>clear</li>
+                            </ul></td>
+                            <td>Blacklist role that will deny users with the role(s) access to any TypicalBot commands.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Automatic Role</td>
+                            <td>autorole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A role that users will gain upon joining the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Automatic Role Delay</td>
+                            <td>autoroledelay</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li><code id="input">&lt;time-in-milliseconds&gt;</code></li>
+                            </ul></td>
+                            <td>The amount of time to wait before giving the auto role.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Automatic Role Silent</td>
+                            <td>autorolesilent</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>If not silent, a message will be sent in the logs channel stating a user was given the autorole.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Subscriber Role</td>
+                            <td>subscriberrole</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A role that will be given when a user uses the <code id="input">subscribe</code> command.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Announcements Channel</td>
+                            <td>announcements</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>here</li>
+                                <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A channel for announcements to be posted, used with the <code id="input">announce</code> command.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Announcements Mention</td>
+                            <td>announcements-mention</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A mention to be put in the announcement when posted, such as a Subscriber role.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Logs Channel</td>
+                            <td>logs</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>here</li>
+                                <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A channel for activity logs to be posted.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Join Logs</td>
+                            <td>logs-join</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li>embed</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user joins the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Leave Logs</td>
+                            <td>logs-leave</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li>embed</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user leaves the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Ban Logs</td>
+                            <td>logs-ban</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li>embed</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user is banned from the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Unban Logs</td>
+                            <td>logs-unban</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li>embed</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user is unbanned from the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Nickname Logs</td>
+                            <td>logs-nickname</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user changes their nickname in the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>User Invite Logs</td>
+                            <td>logs-invite</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>default</li>
+                                <li>enable</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A custom set message to be posted when a user posts an invite in the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Moderation Logs Channel</td>
+                            <td>modlogs</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>here</li>
+                                <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
+                            </ul></td>
+                            <td>A channel to send moderation logs in. Aka audit logs.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Message Purge Moderation Logs</td>
+                            <td>modlogs-purge</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>A modlog to log when a moderator or administrator purges messages in a channel.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Automatic Message</td>
+                            <td>automessage</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;custom-message&gt;</code></li>
+                            </ul></td>
+                            <td>A message to be sent to a user when they join the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Automatic Nickname</td>
+                            <td>autonickname</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;custom-nickname&gt;</code></li>
+                            </ul></td>
+                            <td>A nickname to give a user when they join the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Mode</td>
+                            <td>mode</td>
+                            <td><ul>
+                                <li>free</li>
+                                <li>lite</li>
+                                <li>strict</li>
+                            </ul></td>
+                            <td>A mode to enable/disable a list of commands.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Custom Prefix</td>
+                            <td>customprefix</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li><code id="input">&lt;custom-prefix&gt;</code></li>
+                            </ul></td>
+                            <td>A custom prefix to use other than <code id="input">$</code>.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Default Prefix</td>
+                            <td>defaultprefix</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>The default prefix <code id="input">$</code>.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Anti-Invite</td>
+                            <td>antiinvite</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>Server moderation tool to delete any invites sent by users in the server.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Disable Nickname Command</td>
+                            <td>nonickname</td>
+                            <td><ul>
+                                <li>disable</li>
+                                <li>enable</li>
+                            </ul></td>
+                            <td>A way to disable the <code id="input">nickname</code> command from being used.</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="permission-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Elevated Permissions Required</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
-                <!-- TABLE:UTILITY -->
-
-                <div class="tab-pane fade in" id="utility">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <tr><td class="tab-note" colspan=4>Usage examples with <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td></tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>bots</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$bots</li>
-                                    <li>$bots <code id="input">&lt;page-number&gt;</code></li>
-                                </ul></td>
-                                <td>Gives a list of bots from Carbonitex sorted by server count.</td>
-                            </tr>
-                            <tr>
-                                <td>discriminator</td>
-                                <td><ul>
-                                    <li>discrim</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$discriminator</li>
-                                    <li>$discriminator <code id="input">&lt;discriminator&gt;</code></li>
-                                </ul></td>
-                                <td>Provides a list of all uers with a given discriminator.</td>
-                            </tr>
-                            <tr>
-                                <td>hex</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$hex random</li>
-                                    <li>$hex <code id="input">&lt;hex-code&gt;</code></li>
-                                </ul></td>
-                                <td>Sends a preview of a hex color.</td>
-                            </tr>
-                            <tr>
-                                <td>mylevel</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$mylevel</li>
-                                </ul></td>
-                                <td>Shows you your permission level specific to the server requested it.</td>
-                            </tr>
-                            <tr>
-                                <td>nickname</td>
-                                <td><ul>
-                                    <li>nick</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$nickname</li>
-                                    <li>$nickname reset</li>
-                                    <li>$nickname <code id="input">&lt;desired-nickname&gt;</code></li>
-                                    <li>$nickname <code id="input">&lt;user-mention&gt;</code><i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
-                                    <li>$nickname <code id="input">&lt;user-mention&gt;</code> reset<i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
-                                    <li>$nickname <code id="input">&lt;user-mention&gt;</code> <code id="input">&lt;desired-nickname&gt;</code><i data-toggle="modal" data-target="#permission-2" class="fa fa-asterisk"></i></li>
-                                </ul></td>
-                                <td>Change or clear either your nickname or another user's nickname.</td>
-                            </tr>
-                            <tr>
-                                <td>randomuser</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$randomuser</li>
-                                </ul></td>
-                                <td>Selects a random member in the server.</td>
-                            </tr>
-                            <tr>
-                                <td>search</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$search <code id="input">&lt;query&gt;</code></li>
-                                    <li>$search <code id="input">&lt;query&gt;</code> <code id="input">&lt;page-number&gt;</code></li>
-                                </ul></td>
-                                <td>Searches in the user list for a username or nickname.</td>
-                            </tr>
-                            <tr>
-                                <td>serverinfo</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$serverinfo</li>
-                                </ul></td>
-                                <td>Displays the server's information.</td>
-                            </tr>
-                            <tr>
-                                <td>strawpoll</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$strawpoll <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
-                                    <li>$strawpoll -m <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
-                                </ul></td>
-                                <td>Create a strawpoll vote. Use the '-m' flag for multiple choice.</td>
-                            </tr>
-                            <tr>
-                                <td>subscribe</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$subscribe</li>
-                                </ul></td>
-                                <td>Subscribe to the server's announcements.</td>
-                            </tr>
-                            <tr>
-                                <td>unsubscribe</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$unsubscribe</li>
-                                </ul></td>
-                                <td>Unsubscribe from the server's announcements.</td>
-                            </tr>
-                            <tr>
-                                <td>userinfo</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$userinfo</li>
-                                    <li>$userinfo <code id="input">&lt;user-mention|user-id|user-tag&gt;</code></li>
-                                </ul></td>
-                                <td>Displays a user's information.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modal-body">
+                    The subcommand of that command required an elevated permission level of 3.
                 </div>
-
-                <!-- TABLE:TYPICALBOT -->
-
-                <div class="tab-pane fade in" id="typicalbot">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>commands</td>
-                                <td><ul>
-                                    <li>cmds</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$commands</li>
-                                </ul></td>
-                                <td>Receive a list of TypicalBot's commands.</td>
-                            </tr>
-                            <tr>
-                                <td>documentation</td>
-                                <td><ul>
-                                    <li>docs</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$documentation</li>
-                                </ul></td>
-                                <td>Grab a link to TypicalBot's documentation.</td>
-                            </tr>
-                            <tr>
-                                <td>donate</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$donate</li>
-                                </ul></td>
-                                <td>Donate to the cause of TypicalBot.</td>
-                            </tr>
-                            <tr>
-                                <td>help</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$help</li>
-                                    <li>$help <code id="input">&lt;command-name&gt;</code></li>
-                                </ul></td>
-                                <td>Get general information about TypicalBot or help with a specific command.</td>
-                            </tr>
-                            <tr>
-                                <td>information</td>
-                                <td><ul>
-                                    <li>info</li>
-                                </ul></td>
-                                <td><ul>
-                                    <li>$information</li>
-                                </ul></td>
-                                <td>Get general information about TypicalBot.</td>
-                            </tr>
-                            <tr>
-                                <td>invite</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$invite</li>
-                                </ul></td>
-                                <td>Receive the OAuth2 authorization link for TypicalBot.</td>
-                            </tr>
-                            <tr>
-                                <td>ping</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$ping</li>
-                                </ul></td>
-                                <td>A check to see if TypicalBot is able to respond.</td>
-                            </tr>
-                            <tr>
-                                <td>server</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$server</li>
-                                </ul></td>
-                                <td>Receive an invite to the TypicalBot Lounge.</td>
-                            </tr>
-                            <tr>
-                                <td>servers</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$servers</li>
-                                    <li>$servers <code id="input">&lt;page-number&gt;</code></li>
-                                </ul></td>
-                                <td>Get a list of servers of the current shard.</td>
-                            </tr>
-                            <tr>
-                                <td>stats</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$stats</li>
-                                </ul></td>
-                                <td>Get TypicalBot's current statistics.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- TABLE:HELP -->
-
-                <div class="tab-pane fade in" id="help">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>logs</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$logs</li>
-                                </ul></td>
-                                <td>Sends a help embed in regards to logs.</td>
-                            </tr>
-                            <tr>
-                                <td>perms</td>
-                                <td></td>
-                                <td><ul>
-                                    <li>$perms</li>
-                                </ul></td>
-                                <td>Sends a help embed in regards to permissions.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- TABLE:PUBLIC-ROLES -->
-
-                <div class="tab-pane fade in" id="public-roles">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th width="10%">Name</th>
-                                <th width="50%">Description</th>
-                                <th width="30%">Usage</th>
-                                <th width="10%">Permission</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>roles public add</td>
-                                <td>Add a role to the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
-                                <td><ul>
-                                    <li>$roles public add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>roles public remove</td>
-                                <td>Remove a role from the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
-                                <td><ul>
-                                    <li>$roles public remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>roles public clear</td>
-                                <td>Clear all roles from the public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
-                                <td><ul>
-                                    <li>$roles public clear</li>
-                                </ul></td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>roles public list</td>
-                                <td>List all public roles list users can use <code id="input">$give</code> or <code id="input">$take</code> with.</td>
-                                <td><ul>
-                                    <li>$roles public list</li>
-                                </ul></td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>give</td>
-                                <td>Receive a role off of the public roles list.</td>
-                                <td><ul>
-                                    <li>$give <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>take</td>
-                                <td>Remove a role from you off of the public roles list.</td>
-                                <td><ul>
-                                    <li>$take <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- TABLE:SETTINGS -->
-
-                <div class="tab-pane fade in" id="settings">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <tr><td class="tab-note" colspan=4>Use the <code id="input">settings</code> command found under the moderation tab to change these settings.</td></tr>
-                                <th width="10%"></th>
-                                <th width="10%">Setting</th>
-                                <th width="30%">Values</th>
-                                <th width="35%">Description</th>
-                                <th width="5%">Modifiers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Embed</td>
-                                <td>embed</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>Embed responses from TypicalBot.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Administrator Role</td>
-                                <td>adminrole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>clear</li>
-                                </ul></td>
-                                <td>Administrator role that will grant users with the role(s) permission level 3.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Moderator Role</td>
-                                <td>modrole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>clear</li>
-                                </ul></td>
-                                <td>Moderator role that will grant users with the role(s) permission level 2.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>DJ Role</td>
-                                <td>djrole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>clear</li>
-                                </ul></td>
-                                <td>DJ role that will grant users with the role(s) permission level 1.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Blacklist Role</td>
-                                <td>blacklistrole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>add <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>remove <code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                    <li>clear</li>
-                                </ul></td>
-                                <td>Blacklist role that will deny users with the role(s) access to any TypicalBot commands.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Automatic Role</td>
-                                <td>autorole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A role that users will gain upon joining the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Automatic Role Delay</td>
-                                <td>autoroledelay</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li><code id="input">&lt;time-in-milliseconds&gt;</code></li>
-                                </ul></td>
-                                <td>The amount of time to wait before giving the auto role.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Automatic Role Silent</td>
-                                <td>autorolesilent</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>If not silent, a message will be sent in the logs channel stating a user was given the autorole.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Subscriber Role</td>
-                                <td>subscriberrole</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A role that will be given when a user uses the <code id="input">subscribe</code> command.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Announcements Channel</td>
-                                <td>announcements</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>here</li>
-                                    <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A channel for announcements to be posted, used with the <code id="input">announce</code> command.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Announcements Mention</td>
-                                <td>announcements-mention</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;role-name|role-id|role-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A mention to be put in the announcement when posted, such as a Subscriber role.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Logs Channel</td>
-                                <td>logs</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>here</li>
-                                    <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A channel for activity logs to be posted.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Join Logs</td>
-                                <td>logs-join</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li>embed</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user joins the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Leave Logs</td>
-                                <td>logs-leave</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li>embed</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user leaves the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Ban Logs</td>
-                                <td>logs-ban</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li>embed</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user is banned from the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Unban Logs</td>
-                                <td>logs-unban</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li>embed</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user is unbanned from the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Nickname Logs</td>
-                                <td>logs-nickname</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user changes their nickname in the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>User Invite Logs</td>
-                                <td>logs-invite</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>default</li>
-                                    <li>enable</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A custom set message to be posted when a user posts an invite in the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Moderation Logs Channel</td>
-                                <td>modlogs</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>here</li>
-                                    <li><code id="input">&lt;channel-name|channel-id|channel-mention&gt;</code></li>
-                                </ul></td>
-                                <td>A channel to send moderation logs in. Aka audit logs.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Message Purge Moderation Logs</td>
-                                <td>modlogs-purge</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>A modlog to log when a moderator or administrator purges messages in a channel.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Automatic Message</td>
-                                <td>automessage</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;custom-message&gt;</code></li>
-                                </ul></td>
-                                <td>A message to be sent to a user when they join the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Automatic Nickname</td>
-                                <td>autonickname</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;custom-nickname&gt;</code></li>
-                                </ul></td>
-                                <td>A nickname to give a user when they join the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Mode</td>
-                                <td>mode</td>
-                                <td><ul>
-                                    <li>free</li>
-                                    <li>lite</li>
-                                    <li>strict</li>
-                                </ul></td>
-                                <td>A mode to enable/disable a list of commands.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Custom Prefix</td>
-                                <td>customprefix</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li><code id="input">&lt;custom-prefix&gt;</code></li>
-                                </ul></td>
-                                <td>A custom prefix to use other than <code id="input">$</code>.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Default Prefix</td>
-                                <td>defaultprefix</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>The default prefix <code id="input">$</code>.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Anti-Invite</td>
-                                <td>antiinvite</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>Server moderation tool to delete any invites sent by users in the server.</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Disable Nickname Command</td>
-                                <td>nonickname</td>
-                                <td><ul>
-                                    <li>disable</li>
-                                    <li>enable</li>
-                                </ul></td>
-                                <td>A way to disable the <code id="input">nickname</code> command from being used.</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="modal fade" id="permission-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Elevated Permissions Required</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        The subcommand of that command required an elevated permission level of 3.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
+    <div class="modal fade" id="permission-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Elevated Permissions Required</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    The subcommand of that command required an elevated permission level of 2.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="permission-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Elevated Permissions Required</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        The subcommand of that command required an elevated permission level of 2.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+    </div>
+    <script src="https://use.fontawesome.com/d9402e3b49.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        if (window.location.hash) {$(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show")}
+        $(".nav-tabs a").on("shown.bs.tab", function(tab) {window.location.hash = tab.target.hash.replace("#", "#!")})
+        $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
+    </script>
+</body>
 </html>
-
-<script type="text/javascript">
-    if (window.location.hash) {$(".nav-tabs a[href=\"" + window.location.hash.replace("!", "") + "\"]").tab("show")}
-    $(".nav-tabs a").on("shown.bs.tab", function(tab) {window.location.hash = tab.target.hash.replace("#", "#!")})
-    $("td:empty").append("<i style=\"opacity: 0.5;\" class=\"fa fa-times\"></i>")
-</script>

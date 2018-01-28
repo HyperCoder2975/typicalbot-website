@@ -1,3 +1,9 @@
-RedirectMatch 404 /\.git
-RedirectMatch 404 /README.md
-RedirectMatch 404 /LICENSE
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|md|git|txt)|~)$">
+    ## Apache 2.2
+    Order allow,deny
+    Deny from all
+    Satisfy All
+
+    ## Apache 2.4 comment above and uncomment below
+    # Require all denied
+</FilesMatch>
