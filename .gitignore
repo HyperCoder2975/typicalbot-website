@@ -1,4 +1,5 @@
-*.php
-*.txt
-*.png
-*.jpg
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
