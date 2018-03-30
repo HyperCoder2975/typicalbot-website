@@ -430,8 +430,9 @@
                                 <tr><td class="tab-note" colspan=4>Usage examples with <i data-toggle="modal" data-target="#permission-3" class="fa fa-asterisk"></i> show elevated permissions are required.</td></tr>
                                 <th width="10%">Name</th>
                                 <th width="10%">Aliases</th>
-                                <th width="30%">Usage</th>
-                                <th width="50%">Description</th>
+                                <th width="25%">Usage</th>
+                                <th width="30%">Description</th>
+                                <th width="25%">Example</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -516,10 +517,15 @@
                                 <td>strawpoll</td>
                                 <td></td>
                                 <td><ul>
-                                    <li>$strawpoll <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
-                                    <li>$strawpoll -m <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; chouce3; ...&gt;</code></li>
+                                    <li>$strawpoll <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code></li>
+                                    <li>$strawpoll -m <code id="input">&lt;question&gt;</code> | <code id="input">&lt;choice1; choice2; choice3; ...&gt;</code></li>
                                 </ul></td>
-                                <td>Create a strawpoll vote. Use the '-m' flag for multiple choice.</td>
+                                <td>
+                                  Create a strawpoll vote. Use the '-m' flag for multiple choice.
+                                </td>
+                                <td>
+                                  <code>$strawpoll -m How cool is this? | Totally; Sort of</code>
+                                </td>
                             </tr>
                             <tr>
                                 <td>subscribe</td>
