@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+    font-family: "Grobold";
+    src: url(/grobold.ttf) format("truetype");
+}
+
+nav {
+    height: 5.5rem;
+    border-bottom: 1px #F0EAE7 solid
+}
+
+h1.nav-title {
+    font-family: "Grobold", Arial;
+    font-size: 40px;
+    margin-top: .5rem;
+    margin-left: .3rem;
+    color: #1976D2;
+}
+
+nav img {
+    height: 3.3rem;
+    width: 3.3rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+nav a {
+    color: black;
+    transition: color .15s ease-in-out;
+}
+
+nav a:hover {
+    color: #1976D2
+}
+
+nav .flat {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+nav .flat p {
+    margin-right: 28px;
+    margin-top: 1.65rem;
+}
+
+h1.intro {
+    text-align: center;
+    font-family: 'Roboto';
+    color: #1976D2;
+    font-size: 47px;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+h2.explore-more {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 36px;
+    color: #1976D2;
+    margin-top: 3rem;
+}
+
+.explore-more-button {
+    text-align: center;
+    background-color: #1976D2;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 16px;
+    color: white;
+    font-family: "Grobold";
+    font-size: 39px;
+    border-radius: 13px;
+    margin-top: 2rem;
+}
+
+.gallery {
+    min-height: 350px;
+}
+
+.gallery .promote-card {
+    max-width: 324px;
+    border-radius: 13px;
+    border: 4px #1976D2 solid;
+    height: 100%;
+    -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.gallery .promote-card.card-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery .promote-card.card-right {
+    margin-left: auto;
+}
+
+.gallery .promote-card .card-icon {
+    margin-top: 50px;
+    color: #1976D2;
+}
+
+.gallery .promote-card .promote-button {
+    height: 80px;
+    padding: 10px 18px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px;
+    color: white;
+    font-family: "Grobold", Arial;
+    font-size: 40px;
+    border-radius: 13px;
+    background-color: #1976D2;
+}
