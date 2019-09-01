@@ -47,6 +47,10 @@ nav .flat p {
     margin-top: 1.65rem;
 }
 
+nav .flat p:first-of-type {
+    margin-left: auto;
+}
+
 h1.intro {
     text-align: center;
     font-family: 'Roboto';
@@ -76,14 +80,15 @@ h2.explore-more {
     font-size: 39px;
     border-radius: 13px;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .gallery {
-    min-height: 350px;
+    min-height: 340px;
 }
 
 .gallery .promote-card {
-    max-width: 324px;
+    max-width: 322px;
     border-radius: 13px;
     border: 4px #1976D2 solid;
     height: 100%;
@@ -113,10 +118,72 @@ h2.explore-more {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 65px;
+    margin-top: 50px;
     color: white;
     font-family: "Grobold", Arial;
     font-size: 40px;
     border-radius: 13px;
     background-color: #1976D2;
+}
+
+.footer {
+    margin-top: 10rem;
+    background-color: white !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    border-top: 1px solid #F0EAE7;
+    display: flex;
+}
+
+.footer h1 {
+    width: max-content;
+    padding-right: 20px;
+    border-right: 1px solid #1976D2;
+}
+
+.footer .container .column.is-half:first-of-type {
+    display: flex !important;
+}
+
+.footer .container .column.is-half:first-of-type i {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #1976D2;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.footer .container .column.is-half:nth-of-type(2) {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.footer .container .column.is-half:nth-of-type(2) span {
+    cursor: pointer;
+    transition: color .1s ease-in-out;
+}
+
+.footer .container .column.is-half:nth-of-type(2) span:hover {
+    color: #1976D2
+}
+
+.footer i.fa-discord {
+    margin-top: 21px;
+}
+
+.footer i.fa-github-square:hover {
+    color: black;
+}
+
+.footer i.fa-twitter-square:hover {
+    color: #1da1f2;
+}
+
+.footer i.fa-discord:hover {
+    color: #7289DA;
+}
+
+.footer i.fa-reddit-square:hover {
+    color: #ff5700;
 }
