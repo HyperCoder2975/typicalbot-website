@@ -11,10 +11,9 @@
     <meta property="og:image" content="https://typicalbot.com/x/images/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="/x/images/icon.png" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="/documentation/documentation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" integrity="sha256-ujE/ZUB6CMZmyJSgQjXGCF4sRRneOimQplBVLu8OU5w=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-POYwD7xcktv3gUeZO5s/9nUbRJG/WOmV6jfEGikMJu77LGYO8Rfs2X7URG822aum" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="/documentation/documentation.css">
+    <script src="https://kit.fontawesome.com/1d1846c99b.js"></script>
     <script src="/documentation/string-similarity.js"></script>
     <title>Documentation – TypicalBot</title>
 </head>
@@ -40,8 +39,104 @@
     </nav>
 
     <div class="container is-hidden-touch">
+        <h2 class="intro">
+            Documentation
+        </h2>
+        <div class="columns">
+            <div class="column">
+                <div class="tags">
+                    <span><i class="color-blue fad fa-pencil-ruler"></i> Filters: </span>
+                    <span class="tag"><i class="fad fa-times-circle"></i> Fun</span>
+                    <span class="tag"><i class="fad fa-times-circle"></i> Settings - levels</span>
+                </div>
+            </div>
+            <div class="column is-one-fifth search">
+                <i class="fas fa-search"></i>
+                <input placeholder="Type to search" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>8ball</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1>
+                    <i class="fad fa-caret-square-down fa-2x"></i>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>dice</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1>
+                    <i class="fad fa-caret-square-down fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Administrator roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - levels</h1>
+                    <i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Administrator role that will grant users with the role(s) permission level 3. </p>
+                <ul>
+                    <li>Make just one role administrator</li>
+                    <li class="color-blue">$settings edit adminrole ROLE-NAME-HERE</li>
+                    <li>Add role to list of roles with administrator permissions</li>
+                    <li class="color-blue">$settings edit adminrole add ROLE-NAME-HERE</li>
+                    <li>Remove role from list of roles with administrator permissions</li>
+                    <li class="color-blue">$settings edit adminrole remove ROLE-NAME-HERE</li>
+                    <li>Remove administrator permissions from all roles in the list</li>
+                    <li class="color-blue">$settings edit adminrole clear</li>
+                    <li>Disable administrator permissions</li>
+                    <li class="color-blue">$settings edit adminrole disable</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Moderator roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - levels</h1>
+                    <i class="fad fa-caret-square-down fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-half">
+                        <h1 class="nav-title">TypicalBot</h1>
+                        <i class="fab fa-github-square fa-2x" onclick="window.location = 'https://www.github.com/typicalbot'"></i>
+                        <i class="fab fa-twitter-square fa-2x" onclick="window.location = 'https://www.twitter.com/Typical_Bot'"></i>
+                        <i class="fab fa-discord fa-2x" onclick="window.location = '/join-us'"></i>
+                        <i class="fab fa-reddit-square fa-2x" onclick="window.location = 'https://www.reddit.com/r/TypicalBot/'"></i>
+                    </div>
+                    <div class="column is-half" onclick="window.scrollTo(0, 0)">
+                        <span>Scroll to top</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
