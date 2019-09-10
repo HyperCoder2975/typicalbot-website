@@ -1,13 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
 
 @font-face {
     font-family: "Grobold";
+    font-display: swap;
     src: url(/grobold.ttf) format("truetype");
 }
 
 nav {
-    height: 5.5rem;
-    border-bottom: 1px #F0EAE7 solid
+    height: 6.5rem;
+    background-color: white;
+}
+
+.container.is-hidden-touch {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
 }
 
 h1.nav-title {
@@ -16,6 +23,10 @@ h1.nav-title {
     margin-top: .5rem;
     margin-left: .3rem;
     color: #1976D2;
+}
+
+.darkmode h1.nav-title {
+    color: white;
 }
 
 nav img {
@@ -36,6 +47,10 @@ nav a:hover {
     color: #1976D2
 }
 
+.darkmode nav a:hover {
+    color: #A3C1DF;
+}
+
 nav .flat {
     display: flex;
     flex-direction: row;
@@ -51,13 +66,37 @@ nav .flat p:first-of-type {
     margin-left: auto;
 }
 
+.outer {
+    background-color: #1976D2;
+    border-radius: 25px;
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 1000px;
+    transform: translateY(45px);
+    opacity: 0;
+    user-select: none;
+    transition: .8s ease all;
+}
+
+.outer.active {
+    transform: none;
+    user-select: text;
+    opacity: 1;
+}
+
 h1.intro {
     text-align: center;
     font-family: 'Roboto';
-    color: #1976D2;
-    font-size: 47px;
-    margin-top: 4rem;
+    color: transparent;
+    font-size: 1px;
     margin-bottom: 5rem;
+    transition: all .5s cubic-bezier(.18, .88, .43, 1.21)
+}
+
+h1.intro.active {
+    font-size: 47px;
+    color: white;
 }
 
 h2.intro {
@@ -69,27 +108,66 @@ h2.intro {
     margin-bottom: 4rem;
 }
 
+.explore-more-effect {
+    transform: translateY(50px);
+}
+
+.explore-more-effect a {
+    color: transparent;
+    transition: color 1s ease;
+}
+
+.explore-more-effect a:hover {
+    color: transparent;
+}
+
+.explore-more-effect.active a {
+    color: #A3C1DF;
+    margin-top: 20px;
+    display: inline-block
+}
+
+.explore-more-effect.active a:hover {
+    color: white
+}
+
+.explore-more-effect.active {
+    transform: none;
+}
+
 h2.explore-more {
     text-align: center;
     font-family: 'Roboto';
     font-size: 36px;
-    color: #1976D2;
     margin-top: 3rem;
+    color: transparent;
+    transition: all ease-in 1s;
+}
+
+.explore-more-effect.active h2.explore-more {
+    color: white;
 }
 
 .explore-more-button {
     text-align: center;
-    background-color: #1976D2;
+    background-color: transparent;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
     padding: 15px 16px;
-    color: white;
-    font-family: "Grobold";
+    color: transparent;
+    font-family: "lato";
     font-size: 39px;
     border-radius: 13px;
     margin-top: 2rem;
     cursor: pointer;
+    transition: all ease-in 1s, color .4s ease;
+}
+
+.explore-more-effect.active .explore-more-button {
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    color: #1976D2;
+    background-color: white;
 }
 
 .gallery {
@@ -99,21 +177,65 @@ h2.explore-more {
 .gallery .promote-card {
     max-width: 322px;
     border-radius: 13px;
-    border: 4px #1976D2 solid;
+    border: 4px white solid;
     height: 100%;
-    -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-.gallery .promote-card.card-center {
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
+    transform: translateY(50px);
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    transition: ease 2s all;
+    transition-delay: 0s;
 }
 
-.gallery .promote-card.card-right {
+.promote-card.active {
+    transform: none;
+    background-color: white;
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.promote-card.second {
+    transition-delay: .3s;
+}
+
+.promote-card.third {
+    transition-delay: .6s;
+}
+
+.darkmode .gallery .promote-card.active {
+    background-color: #4a4a4a;
+    border: none;
+    box-shadow: 5px 8px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.darkmode .gallery .promote-card.active .card-icon {
+    transition: ease 2s all;
+    color: white;
+}
+.gallery .promote-card.active .promote-button {
+    transition: ease 2s all;
+    transition-delay: .35s;
+    color: transparent;
+    background-color: transparent;
+}
+.gallery .promote-card.active .promote-button {
+    background-color: #1976D2;
+    color: white
+
+}
+
+.darkmode .gallery .promote-card.active .promote-button {
+    background-color: white;
+    color: #1976D2
+}
+
+.gallery .promote-card {
     margin-left: auto;
+    margin-right: auto;
 }
 
 .gallery .promote-card .card-icon {
@@ -128,20 +250,24 @@ h2.explore-more {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    color: white;
-    font-family: "Grobold", Arial;
+    color: transparent;
+    font-family: "lato", Arial;
     font-size: 40px;
     border-radius: 13px;
     background-color: #1976D2;
+    transition: ease 2s all;
 }
 
-.footer {
-    margin-top: 10rem;
-    background-color: white !important;
+body .footer {
+    margin-top: 4rem;
+    background-color: white;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
-    border-top: 1px solid #F0EAE7;
     display: flex;
+}
+
+body.darkmode .footer {
+    background-color: #4a4a4a
 }
 
 .footer h1 {
@@ -177,20 +303,28 @@ h2.explore-more {
     color: #1976D2
 }
 
+.darkmode .footer .container .column.is-half:nth-of-type(2) span:hover {
+    color: #A3C1DF;
+}
+
 .footer .container .column.is-half:first-of-type i.fa-github-square:hover {
     color: black;
+    transition: color .1s ease-in-out;
 }
 
 .footer .container .column.is-half:first-of-type i.fa-twitter-square:hover {
     color: #1da1f2;
+    transition: color .1s ease-in-out;
 }
 
 .footer .container .column.is-half:first-of-type i.fa-discord:hover {
     color: #7289DA;
+    transition: color .1s ease-in-out;
 }
 
 .footer .container .column.is-half:first-of-type i.fa-reddit-square:hover {
     color: #ff5700;
+    transition: color .1s ease-in-out;
 }
 
 hr {
@@ -252,7 +386,7 @@ hr {
     flex-direction: row;
 }
 
-.row .column.is-one-fifth i.fa-caret-square-down  {
+.row .column.is-one-fifth i.fa-caret-square-down {
     margin-left: auto;
     margin-right: 0;
 }
@@ -277,11 +411,48 @@ hr {
     opacity: 0.6;
 }
 
-.extra-content {
+.row .extra-content {
     margin-left: 2.4rem;
     margin-top: -1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out
+}
+
+.row i.fa-caret-square-down {
+    transform: rotateX(0deg);
+    transition: transform .25s ease-in-out;
+}
+
+.row.selected i.fa-caret-square-down {
+    transform: rotateX(180deg);
+}
+
+.row.selected .extra-content {
+    max-height: 500px;
 }
 
 .extra-content ul {
     margin-top: 1rem;
+}
+
+label, input {
+    color: white;
+    margin-top: 20px !important;
+}
+
+body.darkmode {
+    background-color: #4a4a4a
+}
+
+.darkmode nav {
+    background-color: #4a4a4a;
+}
+
+.darkmode nav a {
+    color: white;
+}
+
+.darkmode .scroll {
+    color: white;
 }

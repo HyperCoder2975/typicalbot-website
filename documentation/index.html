@@ -17,9 +17,42 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="/documentation/string-similarity.js"></script>
     <title>Documentation index – TypicalBot</title>
+
+    <script>
+        window.onload = (function() {
+            if (document.cookie.indexOf("darkmode=") >= 0){
+                document.body.classList.add("darkmode")
+            }
+
+
+            setTimeout(function() {
+                document.querySelectorAll(".outer")[0].classList.add("active")
+                // 1. start blue background
+            }, 100)
+
+                setTimeout(function() {
+                    document.querySelectorAll(".intro")[0].classList.add("active")
+                    // 2. pop intro
+                }, 500)
+
+                setTimeout(function() {
+                    Array.from(document.querySelectorAll(".gallery.columns")[0].children).forEach(i => {
+                        i.children[0].classList.add("active")
+                    })
+                    // 3. fade in cards
+                }, 1050)
+
+                setTimeout(function() {
+                    document.querySelectorAll(".explore-more-effect")[0].classList.add("active")
+                    // 4. show button / bottom text
+                }, 1850)
+
+
+        })
+    </script>
 </head>
 
-<body>
+<body class="">
     <nav>
         <div class="container">
             <div class="columns is-hidden-touch">
@@ -38,43 +71,47 @@
             </div>
         </div>
     </nav>
-
-    <div class="container is-hidden-touch">
-        <h1 class="intro">
-            What do you want to do today?
-        </h1>
-        <div class="gallery columns">
-            <div class="column is-one-third">
-                <div class="promote-card card-left">
-                    <i class="card-icon fa-6x fal fa-music"></i>
-                    <div class="promote-button">
-                        Play music
+    <div class="outer">
+        <div class="container is-hidden-touch">
+            <h1 class="intro">
+                What do you want to do today?
+            </h1>
+            <div class="gallery columns">
+                <div class="column is-one-third">
+                    <div class="promote-card card-left">
+                        <i class="card-icon fa-6x fal fa-music"></i>
+                        <div class="promote-button">
+                            Play music
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third ">
+                    <div class="promote-card card-center second">
+                        <i class="card-icon fa-6x fal fa-grin-tears"></i>
+                        <div class="promote-button">
+                            Have fun
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third ">
+                    <div class="promote-card card-right third">
+                        <i class="card-icon fa-6x fal fa-gavel"></i>
+                        <div class="promote-button">
+                            Moderate
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column is-one-third ">
-                <div class="promote-card card-center">
-                    <i class="card-icon fa-6x fal fa-grin-tears"></i>
-                    <div class="promote-button">
-                        Have fun
-                    </div>
+            <div class="explore-more-effect">
+                <h2 class="explore-more">
+                    Explore everything else TypicalBot does<br>
+                    that makes it far from Typical
+                </h2>
+                <div class="explore-more-button" onclick="window.location = '/documentation/content'">
+                    Documentation
                 </div>
-            </div>
-            <div class="column is-one-third ">
-                <div class="promote-card card-right">
-                    <i class="card-icon fa-6x fal fa-gavel"></i>
-                    <div class="promote-button">
-                        Moderate
-                    </div>
-                </div>
-            </div>
+                <a onclick="checkCookiesAndContinue()">Do not show this screen next time</a>
         </div>
-        <h2 class="explore-more">
-            Explore everything else TypicalBot does<br>
-            that makes it far from Typical
-        </h2>
-        <div class="explore-more-button" onclick="window.location = '/documentation/content'">
-            Complete documentation
         </div>
     </div>
     <div class="footer">
@@ -87,7 +124,7 @@
                     <i class="fab fa-discord fa-2x" onclick="window.location = '/join-us'"></i>
                     <i class="fab fa-reddit-square fa-2x" onclick="window.location = 'https://www.reddit.com/r/TypicalBot/'"></i>
                 </div>
-                <div class="column is-half" onclick="window.scrollTo(0, 0)">
+                <div class="column is-half scroll" onclick="window.scrollTo(0, 0)">
                     <span>Scroll to top</span>
                 </div>
             </div>
