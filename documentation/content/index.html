@@ -16,6 +16,24 @@
     <script src="https://kit.fontawesome.com/1d1846c99b.js"></script>
     <script src="/documentation/string-similarity.js"></script>
     <title>Documentation – TypicalBot</title>
+    <script>
+    window.onload = function(){
+        Array.from(document.querySelectorAll(".fa-caret-square-down")).forEach(i => {
+            i.addEventListener("click", function() {
+
+                if (i.parentElement.parentElement.parentElement.classList.contains("selected")) {
+                    return i.parentElement.parentElement.parentElement.classList.remove("selected")
+                }
+                document.querySelectorAll(".selected").forEach(e => {
+                    e.classList.remove("selected")
+                })
+                i.parentElement.parentElement.parentElement.classList.add("selected")
+            })
+        })
+    }
+
+    </script>
+
 </head>
 
 <body>
@@ -61,47 +79,392 @@
                     <h1 class="command-title"><span class="color-blue">$</span>8ball</h1>
                 </div>
                 <div class="column is-one-fifth">
-                    <h1 class="command-title color-blue">Fun</h1>
-                    <i class="fad fa-caret-square-down fa-2x"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="columns">
-                <div class="column">
-                    <h1 class="command-title"><span class="color-blue">$</span>dice</h1>
-                </div>
-                <div class="column is-one-fifth">
-                    <h1 class="command-title color-blue">Fun</h1>
-                    <i class="fad fa-caret-square-down fa-2x"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="columns">
-                <div class="column">
-                    <h1 class="command-title">Administrator roles</h1>
-                </div>
-                <div class="column is-one-fifth">
-                    <h1 class="command-title color-blue">Settings - levels</h1>
-                    <i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
                 </div>
             </div>
             <div class="extra-content">
-                <p class="description">Administrator role that will grant users with the role(s) permission level 3. </p>
+                <p class="description">Ask the magic 8ball a question.</p>
                 <ul>
-                    <li>Make just one role administrator</li>
-                    <li class="color-blue">$settings edit adminrole ROLE-NAME-HERE</li>
-                    <li>Add role to list of roles with administrator permissions</li>
-                    <li class="color-blue">$settings edit adminrole add ROLE-NAME-HERE</li>
-                    <li>Remove role from list of roles with administrator permissions</li>
-                    <li class="color-blue">$settings edit adminrole remove ROLE-NAME-HERE</li>
-                    <li>Remove administrator permissions from all roles in the list</li>
-                    <li class="color-blue">$settings edit adminrole clear</li>
-                    <li>Disable administrator permissions</li>
-                    <li class="color-blue">$settings edit adminrole disable</li>
+                    <li>Ask the magic 8ball a question</li>
+                    <li class="color-blue">$8ball Am i an awesome human being?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Cookie</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Give another user a cookie, or keep them all for yourself.</p>
+                <ul>
+                    <li>Give a mentioned user a cookie</li>
+                    <li class="color-blue">$cookie @HyperCoder</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Dice</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Roll a n-sided die.</p>
+                <ul>
+                    <li>Roll a dice between 1 - 6</li>
+                    <li class="color-blue">$dice</li>
+                    <li>Roll a dice between 1 - 24</li>
+                    <li class="color-blue">$dice 24</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Hug</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">'Hug' another user in the server.</p>
+                <ul>
+                    <li>Hug a mentioned user</li>
+                    <li class="color-blue">$hug @Hypercoder</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Joke</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random joke.</p>
+                <ul>
+                    <li>Get a joke from the bot</li>
+                    <li class="color-blue">$joke</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Punch</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">'Punch' another user in the server.</p>
+                <ul>
+                    <li>Punch a mentioned user</li>
+                    <li class="color-blue">$punch @Packer</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Broken command, uncomment when fixed -->
+        <!--
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Quote</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random quote.</p>
+                <ul>
+                    <li>Get a quote from the bot</li>
+                    <li class="color-blue">$quote</li>
+                </ul>
+            </div>
+        </div>
+    -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Shoot</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">'Shoot' another user in the server.</p>
+                <ul>
+                    <li>Shoot a mentioned user</li>
+                    <li class="color-blue">$shoot @packer</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Slap</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">'Slap' another user in the server.</p>
+                <ul>
+                    <li>Slap a mentioned user</li>
+                    <li class="color-blue">$slap @packer</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Stab</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">'Stab' another user in the server.</p>
+                <ul>
+                    <li>Stab a mentioned user</li>
+                    <li class="color-blue">$stab @packer</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Add nsfw label -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Urban</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Grabs the definition from Urban Dictionary for the specified word.</p>
+                <ul>
+                    <li>Get the urban dictionary entry for a certain word</li>
+                    <li class="color-blue">$urban pineapple</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Yomomma</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Fun</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random yomomma joke.</p>
+                <ul>
+                    <li>Get a yomomma joke from the api</li>
+                    <li class="color-blue">$yomomma</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Play</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Streams a song or playlist to a voice channel from YouTube.</p>
+                <ul>
+                    <li>Play a song using a YouTube search query</li>
+                    <li class="color-blue">$play Wavin' flag</li>
+                    <li>Play a song using a YouTube url</li>
+                    <li class="color-blue">$play https://youtu.be/dQw4w9WgXcQ</li>
+                    <li>Play a playlist using a YouTube url</li>
+                    <li class="color-blue">$play https://www.youtube.com/playlist?list=PLC1670714BCED30AF</li>
+                    <li>Play a live stream using the YouTube live url</li>
+                    <li class="color-blue">$play https://youtu.be/GVC5adzPpiE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Stop</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Stop what is currently playing.</p>
+                <ul>
+                    <li>Stop playing and clear the queue</li>
+                    <li class="color-blue">$stop</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Queue</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Displays a list of videos queued to stream.</p>
+                <ul>
+                    <li>Get the list of songs currently in the queue</li>
+                    <li class="color-blue">$queue</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Unqueue</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Removes a song from the server's queue.</p>
+                <ul>
+                    <li>Unqueue using the name of the song / video being played</li>
+                    <li class="color-blue">$unqueue Wavin' flag</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Pause</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Pause the song currently streaming.</p>
+                <ul>
+                    <li>Pause the current song</li>
+                    <li class="color-blue">$pause</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Resume</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Resume the song paused.</p>
+                <ul>
+                    <li>Resume the paused song</li>
+                    <li class="color-blue">$resume</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Volume</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the volume of the content currently streaming.</p>
+                <ul>
+                    <li>Get the current volume</li>
+                    <li class="color-blue">$volume</li>
+                    <li>Set the volume to 145%</li>
+                    <li class="color-blue">$volume 145</li>
+                    <li>Set the volume to 55%</li>
+                    <li class="color-blue">$volume 55</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TBU command -->
+        <!--
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Youtube</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Search for a video from YouTube.</p>
+                <ul>
+                    <li>DESCRIPTION HERE | NOT FINISHED YET</li>
+                    <li class="color-blue">$youtube Wavin' flag</li>
+                </ul>
+            </div>
+        </div>
+    -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Skip</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Skip songs that are playing.</p>
+                <ul>
+                    <li>Skip the song currently playing</li>
+                    <li class="color-blue">$skip</li>
+                    <li>Skip the specified songs in the current queue</li>
+                    <li class="color-blue">$skip 2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Bunny</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Images</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random bunny picture.</p>
+                <ul>
+                    <li>Get a bunny image from the bot</li>
+                    <li class="color-blue">$bunny</li>
                 </ul>
             </div>
         </div>
@@ -109,34 +472,1859 @@
         <div class="row">
             <div class="columns">
                 <div class="column">
-                    <h1 class="command-title">Moderator roles</h1>
+                    <h1 class="command-title"><span class="color-blue">$</span>Cat</h1>
                 </div>
                 <div class="column is-one-fifth">
-                    <h1 class="command-title color-blue">Settings - levels</h1>
-                    <i class="fad fa-caret-square-down fa-2x"></i>
+                    <h1 class="command-title color-blue">Images</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
                 </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random cat picture.</p>
+                <ul>
+                    <li>Get a cat image from the bot</li>
+                    <li class="color-blue">$cat</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Dog</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Images</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random dog picture.</p>
+                <ul>
+                    <li>Get a dog picture from the bot</li>
+                    <li class="color-blue">$dog</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Broken command -->
+        <!--
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Tiger</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Images</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives you a random tiger picture.</p>
+                <ul>
+                    <li>Get a tiger picture from the bot</li>
+                    <li class="color-blue">$tiger</li>
+                </ul>
+            </div>
+        </div>
+    -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Adcheck</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Check if any members of a server have a server invite in their playing status.</p>
+                <ul>
+                    <li>List every user with a server invite in their playing status</li>
+                    <li class="color-blue">$adcheck</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: make "announcements channel" linkable -->
+        <!-- TODO: make "announcements mention role" linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Announce</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Send an announcement to the announcements channel. use '-e' to embed the message. Will use the announcements mention role if set.</p>
+                <ul>
+                    <li>Send an announcement to the announcement channel.</li>
+                    <li class="color-blue">$announce Hey everyone! We have some updates!</li>
+                    <li>Send an announcement to the announcement channel in an embed</li>
+                    <li class="color-blue">$announce -e This is an embedded announcement!</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Check if up to date -->
+        <!-- TODO: make modlogs linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Ban</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Ban a member from the server.</p>
+                <ul>
+                    <li>Ban the mentioned user</li>
+                    <li class="color-blue">$ban @Xenotater</li>
+                    <li>Ban the mentioned user and purge 2 days of messages</li>
+                    <li class="color-blue">$ban @Xenotater 2</li>
+                    <li>Ban the mentioned user and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$ban @Xenotater Shamelessly promoting his YouTube channel.</li>
+                    <li>Ban the mentioned user, purge 3 days of messages and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$ban @Xenotater 3 Shamelessly promoting his YouTube channel.</li>
+                    <li>Ban the mentioned user for a specified time period</li>
+                    <li class="color-blue">$ban @Xenotater 2h 2m 5s</li>
+                    <li>Ban the mentioned user for a specified time period and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$ban @Xenotater 3d Shamelessly promoting his YouTube channel.</li>
+                    <li>ban the mentioned user for a specified time period, purge 4 days of messages and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$ban @Xenotater 2h 1s 4 Shamelessly promoting his YouTube channel.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: make antiinvite linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Ignore</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Makes the bot ignore commands, invites or stars in a channel.</p>
+                <ul>
+                    <li>Ignore Discord invites in the channel this is sent in, if the antiinvite setting is turned on.</li>
+                    <li class="color-blue">$ignore invites</li>
+                    <li>Ignore commands in the channel this is sent in</li>
+                    <li class="color-blue">$ignore commands</li>
+                    <li>Ignore starboard invites in the channel this is sent in, if the starboard setting is turned on</li>
+                    <li class="color-blue">$ignore stars</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Make modlogs linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Kick</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Kick a member from the server.</p>
+                <ul>
+                    <li>Kick the mentioned user from the server</li>
+                    <li class="color-blue">$kick @Xenotater</li>
+                    <li>Kick the mentioned user from the server, and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$kick @Xenotater Shamelessly promoting his YouTube channel.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Make modlogs linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Purge</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Purge messages in a channel.
+                    Due to a limitation set by Discord, bots cannot remove messages older then 14 days, or more then 100 at once.
+                </p>
+                <ul>
+                    <li>Remove the last 50 message</li>
+                    <li class="color-blue">$purge 50</li>
+                    <li>Remove the last 22 messages, but only when they were sent by the mentioned user</li>
+                    <li class="color-blue">$purge @Xenotater 22</li>
+                    <li>Remove the last 27 messages, but only when they were sent by the mentioned user. Also adds a reason to the modlogs if set up</li>
+                    <li class="color-blue">$purge @Xenotater 27 Shamelessly promoting his YouTube channel.</li>
+                    <li>Remove the last 2 messages in the mentioned channel</li>
+                    <li class="color-blue">$purge #lounge 2</li>
+                    <li>Remove the last 3 messages in the mentioned channel and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$purge #lounge 3 Shamelessly promoting his YouTube channel.</li>
+                    <li>Remove the last 13 messages, but only when it's a message sent by a user with the mentioned role</li>
+                    <li class="color-blue">$purge @Administrators 13</li>
+                    <li>Remove the last 83 messages, but only when it's a message sent by a user with the mentioned role. Also adds a reason to the modlogs if set up</li>
+                    <li class="color-blue">$purge @Administrators 83 Secret sauce!</li>
+                    <li>Remove the last 8 message, but only when they are sent by you</li>
+                    <li class="color-blue">$purge me 8</li>
+                    <li>Remove the last 8 messages, but only when they are sent by you, also adds a reason to the modlogs</li>
+                    <li class="color-blue">$purge me 8 Spam!</li>
+                    <li>Alias of purge me</li>
+                    <li class="color-blue">$purge you 83</li>
+                    <li>Alias of purge me</li>
+                    <li class="color-blue">$purge you 18 Bot is sending so many responses.</li>
+                    <li>Remove the last 54 messages, but only when they are sent by a bot</li>
+                    <li class="color-blue">$purge bots 54</li>
+                    <li>Remove the last 54 messages, but only when they are sent by a bot. Also adds a reason to the modlogs</li>
+                    <li class="color-blue">$purge bots Too many bot messages!</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to modlogs -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Reason</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change or set a reason for a case in moderation logs.</p>
+                <ul>
+                    <li>Update the last case in the modlogs</li>
+                    <li class="color-blue">$reason latest Because i said so!</li>
+                    <li>Update case 2 in the modlogs</li>
+                    <li class="color-blue">$reason 2 Because I said so!</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to give and take -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Manage or list the server's roles or public roles. </p>
+                <ul>
+                    <li>Get more info on how to use this command</li>
+                    <li class="color-blue">$roles help</li>
+                    <li>Get a list of roles in this server</li>
+                    <li class="color-blue">$roles list</li>
+                    <li>Get complete information about the mentioned role</li>
+                    <li class="color-blue">$roles info @Administrator</li>
+                    <li>Get a list of users who have the mentioned role on them </li>
+                    <li class="color-blue">$roles info members @Administrator</li>
+                    <li>Give the mentioned role to the mentioned user</li>
+                    <li class="color-blue">$roles give @Xenotater Administrator</li>
+                    <li>Take the mentioned role from the mentioned user</li>
+                    <li class="color-blue">$roles take @Xenotater Administrator</li>
+                    <li>Get a list of roles that are public and can be given/taken using $give and $take</li>
+                    <li class="color-blue">$roles public list</li>
+                    <li>Add a role to the public roles</li>
+                    <li class="color-blue">$roles public add Administrator</li>
+                    <li>Remove a role from the public roles</li>
+                    <li class="color-blue">$roles public remove Administrator</li>
+                    <li>Completely remove the public roles</li>
+                    <li class="color-blue">$roles public clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Say</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Makes the bot send a message with the content used.</p>
+                <ul>
+                    <li>Let the bot say the specified message in the current channel</li>
+                    <li class="color-blue">$say Howdy guys!</li>
+                    <li>Let the bot say the specified message in the mentioned channel</li>
+                    <li class="color-blue">$say #general Hey guys!</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: make modlogs linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Softban</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Quickly bans and unbans a member from the server, essentially kicking them and clearing their messages.</p>
+                <ul>
+                    <li>Softban (kick) the mentioned user</li>
+                    <li class="color-blue">$softban @Xenotater</li>
+                    <li>Softban (kick and purge 2 days from) the mentioned user</li>
+                    <li class="color-blue">$softban @Xenotater 2</li>
+                    <li>Softban (kick) the mentioned user and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$softban @Xenotater Shamelessly promoting his YouTube channel.</li>
+                    <li>Softban (kick and purge 3 days from) the mentioned user, and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$softban @Xenotater 3 Shamelessly promoting his YouTube channel.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Unban</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Unban a user from the server.</p>
+                <ul>
+                    <li>Unban a user the mentioned user's Discord id</li>
+                    <li class="color-blue">$unban 187980183569956864</li>
+                    <li>Unban a user the mentioned user's Discord id and add a reason to the modlogs if set up</li>
+                    <li class="color-blue">$unban 187980183569956864 Agreed to stop shamelessly promoting his YouTube channel.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: make starboard / antiinvite linkable -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Unignore</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Makes the bot unignore commands, invites or stars in a channel.</p>
+                <ul>
+                    <li>Unignore commands in the current channel</li>
+                    <li class="color-blue">$unignore commands</li>
+                    <li>Unignore Discord invites in the current channel if the antiinvite setting is enabled</li>
+                    <li class="color-blue">$unignore invites</li>
+                    <li>Unignore star emoji reactions in the current channel if the starboard setting is enabled</li>
+                    <li class="color-blue">$unignore stars</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to modlogs -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Warn</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Warn a member in the server.
+                    This command only works when you set up moderation logs
+                    To search warnings, use the discord built in search feature
+                </p>
+                <ul>
+                    <li>Send a warning dm to the mentioned user to let them know they have been warned</li>
+                    <li class="color-blue">$warn @Xenotater</li>
+                    <li>Send a warning dm to the mentioned user to let them know they have been warned and add the reason it to the modlogs</li>
+                    <li class="color-blue">$warn @Xenotater Shamelessly promoting his YouTube channel.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Bots</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Gives a list of bots from Carbonitex sorted by server count.</p>
+                <ul>
+                    <li>Get a list of the most used bots</li>
+                    <li class="color-blue">$bots</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Discriminator</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Provides a list of all users with a given discriminator.</p>
+                <ul>
+                    <li>Get a list of users with your current discriminator</li>
+                    <li class="color-blue">$discriminator</li>
+                    <li>Get a list of users with the specified discriminator</li>
+                    <li class="color-blue">$discriminator 5233</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Hex</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Sends a preview of a hex color.</p>
+                <ul>
+                    <li>Get a random color and it's color code</li>
+                    <li class="color-blue">$hex random</li>
+                    <li>Get a specific color based on the hex code</li>
+                    <li class="color-blue">$hex #1976D2</li>
+                    <li>Get a specific color based on the hex code</li>
+                    <li class="color-blue">$hex 00adff</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Mylevel</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Shows you your permission level specific to the server requested it.</p>
+                <ul>
+                    <li>Get your current permission level</li>
+                    <li class="color-blue">$mylevel</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Nickname</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change or clear either your nickname or another user's nickname.</p>
+                <ul>
+                    <li>Reset your nickname</li>
+                    <li class="color-blue">$nickname</li>
+                    <li>Change your own nickname</li>
+                    <li class="color-blue">$nickname cool guy</li>
+                    <li>Reset the mentioned user's nickname</li>
+                    <li class="color-blue">$nickname @AKSKL</li>
+                    <li>Change the mentioned users's nickname</li>
+                    <li class="color-blue">$nickname @AKSKL dumb guy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Randomuser</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Selects a random member in the server.</p>
+                <ul>
+                    <li>Select a random user</li>
+                    <li class="color-blue">$randomuser</li>
+                    <li>Select a random online user</li>
+                    <li class="color-blue">$randomuser -o</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Search</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Searches in the user list for a username or nickname.</p>
+                <ul>
+                    <li>Search a user by username</li>
+                    <li class="color-blue">$search HyperCoder</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Serverinfo</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Displays the server's information.</p>
+                <ul>
+                    <li>Get the information of the server</li>
+                    <li class="color-blue">$serverinfo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Userinfo</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Displays an user's information.</p>
+                <ul>
+                    <li>Get your own information</li>
+                    <li class="color-blue">$userinfo</li>
+                    <li>Get the mentioned user's information</li>
+                    <li class="color-blue">$userinfo @Tobias</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Strawpoll</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Create a strawpoll vote. Use the '-m' flag for multiple choice.</p>
+                <ul>
+                    <li>Make a strawpoll with a simple yes or no question</li>
+                    <li class="color-blue">$strawpoll Does 1 + 1 equal 2? | yes; no</li>
+                    <li>Make a strawpoll with 3 answers, where they can select multiple</li>
+                    <li class="color-blue">$strawpoll -m What's your favorite color? | Red; Blue; Yellow;</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Link the subscriberrole -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Subscribe</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Subscribe to the server's announcements.</p>
+                <ul>
+                    <li>Subscribe to the subscriberrole, if one is set up</li>
+                    <li class="color-blue">$subscribe</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Link the subscriberrole -->
+
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Unsubscribe</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Utility</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Unsubscribe from the server's announcements.</p>
+                <ul>
+                    <li>unSubscribe from the subscriberrole, if one is set up</li>
+                    <li class="color-blue">$unsubscribe</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Commands</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Receive a list of TypicalBot's commands.
+                    Make sure TypicalBot can send a dm to you.
+                </p>
+                <ul>
+                    <li>Receive a list of commands in your dms</li>
+                    <li class="color-blue">$commands</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Documentation</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Grab a link to TypicalBot's documentation.</p>
+                <ul>
+                    <li>Get linked to this website!</li>
+                    <li class="color-blue">$documentation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Donate</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Donate to TypicalBot!</p>
+                <ul>
+                    <li>Support the bot to help us keep the it online!</li>
+                    <li class="color-blue">$donate</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Help</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Get general information about TypicalBot or help with a specific command.</p>
+                <ul>
+                    <li>Get information about what TypicalBot is</li>
+                    <li class="color-blue">$help</li>
+                    <li>Get information about a command</li>
+                    <li class="color-blue">$help play</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Information</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Get general information about TypicalBot.</p>
+                <ul>
+                    <li>Get information about what TypicalBot is</li>
+                    <li class="color-blue">$information</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Invite</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Add TypicalBot to your server</p>
+                <ul>
+                    <li>Get a Discord bot invite url</li>
+                    <li class="color-blue">$invite</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Ping</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A command to see if TypicalBot is able to respond.</p>
+                <ul>
+                    <li>Get the current response time (this does not test your internet)</li>
+                    <li class="color-blue">$ping</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to server url -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Server</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Receive an invite to the TypicalBot Lounge.</p>
+                <ul>
+                    <li>Receive a Discord server invite to the TypicalBot Lounge</li>
+                    <li class="color-blue">$server</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Servers</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Get a list of all the servers that have TypicalBot invited to them (Current cluster only).</p>
+                <ul>
+                    <li>Get a list of all Discord servers on TB's current cluster</li>
+                    <li class="color-blue">$servers</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Stats</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">TypicalBot</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Get TypicalBot's current statistics.</p>
+                <ul>
+                    <li>Get TypicalBot's statistics</li>
+                    <li class="color-blue">$stats</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Help</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Sends a help embed in regards to logs.</p>
+                <ul>
+                    <li>Use this command to learn about logs</li>
+                    <li class="color-blue">$logs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Perms</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Help</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Sends a help embed in regards to permissions.</p>
+                <ul>
+                    <li>Use this command to learn about permission levels</li>
+                    <li class="color-blue">$perms</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Creating Public Roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Add a role to the public roles list users can use $give or $take with.</p>
+                <ul>
+                    <li>Add the specified role to the public role list</li>
+                    <li class="color-blue">$roles public add Member</li>
+                    <li>Add the specified role id to the public role list</li>
+                    <li class="color-blue">$roles public add 237711151742320640</li>
+                    <li>add the mentioned role to the public role list</li>
+                    <li class="color-blue">$roles public add @Member</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Removing Public Roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Remove a role from the public roles list users can use $give or $take with.</p>
+                <ul>
+                    <li>Take the specified role from the public role list</li>
+                    <li class="color-blue">$roles public remove Member</li>
+                    <li>Take the specified role id from the public role list</li>
+                    <li class="color-blue">$roles public remove 237711151742320640</li>
+                    <li>Take the mentioned role from the public role list</li>
+                    <li class="color-blue">$roles public remove @Member</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Clearing Public Roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Clear all roles from the public roles list users can use $give or $take with.</p>
+                <ul>
+                    <li>Clear all roles from the public role list</li>
+                    <li class="color-blue">$roles public clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Listing Public Roles</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">List all roles from the public roles list users can use $give or $take with.</p>
+                <ul>
+                    <li>List all the public roles</li>
+                    <li class="color-blue">$roles public list</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Give</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Receive a role that's on the public role list.</p>
+                <ul>
+                    <li>Get the specified public role</li>
+                    <li class="color-blue">$give Member</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Take</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Public roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Remove a role from you that's on the public role list.</p>
+                <ul>
+                    <li>Remove the specified public role from you</li>
+                    <li class="color-blue">$take Member</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Embed</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - General</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Embed responses from TypicalBot.</p>
+                <ul>
+                    <li>Enable embeds from TypicalBot</li>
+                    <li class="color-blue">$settings edit embed enable</li>
+                    <li>Disable embeds from TypicalBot</li>
+                    <li class="color-blue">$settings edit embed disable</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Link discord role faq from the discord site -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Administrator Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Permissions</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Administrator role that will grant users with the role(s) permission level 3.</p>
+                <ul>
+                    <li>Set the adminrole to the specified Discord role</li>
+                    <li class="color-blue">$settings edit adminrole Administrators</li>
+                    <li>Add the specified role to the list of adminroles</li>
+                    <li class="color-blue">$settings edit adminrole add Administrators</li>
+                    <li>Remove the specified role from the list of adminroles</li>
+                    <li class="color-blue">$settings edit adminrole remove Administrators</li>
+                    <li>Remove all roles from the list of adminroles</li>
+                    <li class="color-blue">$settings edit adminrole clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Moderator Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Permissions</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Moderator role that will grant users with the role(s) permission level 2.</p>
+                <ul>
+                    <li>Set the moderator role to the specified Discord role</li>
+                    <li class="color-blue">$settings edit modrole Moderators</li>
+                    <li>Add the specified role to the list of moderator roles</li>
+                    <li class="color-blue">$settings edit modrole add Moderators</li>
+                    <li>Remove the specified role to the list of moderator roles</li>
+                    <li class="color-blue">$settings edit modrole remove Moderators</li>
+                    <li>Remove all roles from the list of moderator roles</li>
+                    <li class="color-blue">$settings edit modrole clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">DJ Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Permissions</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">DJ role that will grant users with the role(s) permission level 1.</p>
+                <ul>
+                    <li>Set the dj role to the specified Discord role</li>
+                    <li class="color-blue">$settings edit djrole Djs</li>
+                    <li>Add the specified role to the list of dj roles</li>
+                    <li class="color-blue">$settings edit djrole add Djs</li>
+                    <li>Remove the specified role to the list of dj roles</li>
+                    <li class="color-blue">$settings edit djrole remove Djs</li>
+                    <li>Remove all roles from the list of dj roles</li>
+                    <li class="color-blue">$settings edit djrole clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Blacklist Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Permissions</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Blacklist a role that will deny users with the role(s) access to any TypicalBot commands.</p>
+                <ul>
+                    <li>Set the blacklisted role to the specified Discord role</li>
+                    <li class="color-blue">$settings edit blacklistrole Bots-Banned</li>
+                    <li>Add the specified role to the list of blacklisted roles</li>
+                    <li class="color-blue">$settings edit blacklistrole add Bots-Banned</li>
+                    <li>Remove the specified role to the list of blacklisted roles</li>
+                    <li class="color-blue">$settings edit blacklistrole remove Bots-Banned</li>
+                    <li>Remove all roles from the list of blacklisted roles</li>
+                    <li class="color-blue">$settings edit blacklistrole clear</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to mute -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Mute Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A role that will be applied when a user is muted using the $mute command.
+                    !You will have to setup permissions yourself!</p>
+                <ul>
+                    <li>Set the mute role to the specified Discord role</li>
+                    <li class="color-blue">$settings edit muterole Muted</li>
+                    <li>Add the specified role to the list of muted roles</li>
+                    <li class="color-blue">$settings edit muterole add Muted</li>
+                    <li>Remove the specified role to the list of muted roles</li>
+                    <li class="color-blue">$settings edit muterole remove Muted</li>
+                    <li>Remove all roles from the list of muted roles</li>
+                    <li class="color-blue">$settings edit muterole clear</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A role that the bot will give upon joining the server.</p>
+                <ul>
+                    <li>Set the autorole to the specified role name</li>
+                    <li class="color-blue">$settings edit autorole User</li>
+                    <li>Disable automatically giving the role on join</li>
+                    <li class="color-blue">$settings edit autorole disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Role for Bots</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A role that TypicalBot will give another bot upon joining the server.</p>
+                <ul>
+                    <li>Set the bot's autorole to the specified role name</li>
+                    <li class="color-blue">$settings edit autorole-bots Bot</li>
+                    <li>Disable automatically giving the role on join</li>
+                    <li class="color-blue">$settings edit autorole-bots disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Role Delay</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">The amount of time in milliseconds to wait before giving the automatic role.</p>
+                <ul>
+                    <li>Set the delay to 15 minutes</li>
+                    <li class="color-blue">$settings edit autorole-delay 15000</li>
+                    <li>Disable the delay</li>
+                    <li class="color-blue">$settings edit autorole-delay disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Role Silent</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - </h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">If not silent, a message will be sent in the logs channel (when enabled) stating a user was given the role.</p>
+                <ul>
+                    <li>Enable silently giving roles</li>
+                    <li class="color-blue">$settings edit autorole-silent enable</li>
+                    <li>Disable silently giving roles</li>
+                    <li class="color-blue">$settings edit autorole-silent disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Subscriber Role</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Roles</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A role that will be given when a user uses the $subscribe command.</p>
+                <ul>
+                    <li>Set the subscriberrole to the specified role</li>
+                    <li class="color-blue">$settings edit subscriberrole Subscribers</li>
+                    <li>disable the use of $subscribe</li>
+                    <li class="color-blue">$settings edit subscriberrole disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Announcements Channel</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Announcements</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">The channel where announcements using the $announce commands will be sent.</p>
+                <ul>
+                    <li>Set the announcements channel to the current channel</li>
+                    <li class="color-blue">$settings edit announcements here</li>
+                    <li>Set the announcements channel to the mentioned channel</li>
+                    <li class="color-blue">$settings edit announcements #welcome</li>
+                    <li>Disable the announcements channel</li>
+                    <li class="color-blue">$settings edit announcements disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Announcements Mention</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Announcements</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A mention to be put in the announcement when posted, such as a subscriber role.</p>
+                <ul>
+                    <li>Set the mentionable role to the specified role</li>
+                    <li class="color-blue">$settings edit announcements-mention Subscribers</li>
+                    <li>Disable the mentionable role setting</li>
+                    <li class="color-blue">$settings edit announcements-mention disable</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link modlogs -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Logs Channel Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A channel for activity logs to be posted.
+                    This channel needs to be set for all the logs, except modlogs, which has it's own channel setting
+                </p>
+                <ul>
+                    <li>Set the logs channel to the current channel</li>
+                    <li class="color-blue">$settings edit logs here</li>
+                    <li>Set the logs channel to the mentioned channel</li>
+                    <li class="color-blue">$settings edit logs #activity</li>
+                    <li>Disable the logs channel and stop all logs from sending messages</li>
+                    <li class="color-blue">$settings edit logs disable</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO:  Add image of the placeholders -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Join Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user joins the server. (customizable)
+                    Click [here] for an image of all the available placeholders
+                </p>
+                <ul>
+                    <li>Enable the user join logs</li>
+                    <li class="color-blue">$settings edit logs-join enable</li>
+                    <li>Disable the user join logs</li>
+                    <li class="color-blue">$settings edit logs-join disable</li>
+                    <li>Enable the user join logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-join default</li>
+                    <li>Enable the user join logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-join embed</li>
+                    <li>Enable the user join logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-join Welcome {user}! I hope you enjoy your stay!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Leave Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user leaves the server. (customizable)</p>
+                <ul>
+                    <li>Enable the user leave logs</li>
+                    <li class="color-blue">$settings edit logs-leave enable</li>
+                    <li>Disable the user leave logs</li>
+                    <li class="color-blue">$settings edit logs-leave disable</li>
+                    <li>Enable the user leave logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-leave default</li>
+                    <li>Enable the user leave logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-leave embed</li>
+                    <li>Enable the user leave logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-leave Goodbye {user}! </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Ban Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user is banned from the server. (customizable)</p>
+                <ul>
+                    <li>Enable the user ban logs</li>
+                    <li class="color-blue">$settings edit logs-ban enable</li>
+                    <li>Disable the user ban logs</li>
+                    <li class="color-blue">$settings edit logs-ban disable</li>
+                    <li>Enable the user ban logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-ban default</li>
+                    <li>Enable the user ban logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-ban embed</li>
+                    <li>Enable the user ban logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-ban {user} has been banned! </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Unban Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user is unbanned in the server. (customizable)</p>
+                <ul>
+                    <li>Enable the user unban logs</li>
+                    <li class="color-blue">$settings edit logs-unban enable</li>
+                    <li>Disable the user unban logs</li>
+                    <li class="color-blue">$settings edit logs-unban disable</li>
+                    <li>Enable the user unban logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-unban default</li>
+                    <li>Enable the user unban logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-unban embed</li>
+                    <li>Enable the user unban logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-ban {user} has been unban! </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Nickname Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user changes their nickname in the server. (customizable)</p>
+                <ul>
+                    <li>Enable the user nickname logs</li>
+                    <li class="color-blue">$settings edit logs-nickname enable</li>
+                    <li>Disable the user nickname logs</li>
+                    <li class="color-blue">$settings edit logs-nickname disable</li>
+                    <li>Enable the user nickname logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-nickname default</li>
+                    <li>Enable the user nickname logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-nickname embed</li>
+                    <li>Enable the user nickname logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-nickname {user} has changed his nickname ({user.oldnick} => {user.nick})!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Invite Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user posts an invite in the server, requires anti-invite to be enabled. (customizable)</p>
+                <ul>
+                    <li>Enable the invite logs</li>
+                    <li class="color-blue">$settings edit logs-invite enable</li>
+                    <li>Disable the invite logs</li>
+                    <li class="color-blue">$settings edit logs-invite disable</li>
+                    <li>Enable the invite logs, and set it to the default message</li>
+                    <li class="color-blue">$settings edit logs-invite default</li>
+                    <li>Enable the invite logs, and set it to the default embedded message (not customizable)</li>
+                    <li class="color-blue">$settings edit logs-invite embed</li>
+                    <li>Enable the invite logs, and set it to a custom message</li>
+                    <li class="color-blue">$settings edit logs-invite {user} has sent and invite in {channel.name}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">User Say Logs </h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message posted when an user uses the $say command in the server.</p>
+                <ul>
+                    <li>Enable the invite logs</li>
+                    <li class="color-blue">$settings edit logs-say enable</li>
+                    <li>Disable the invite logs</li>
+                    <li class="color-blue">$settings edit logs-say disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Moderation Logs</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A channel to send moderation logs in (bans, kicks, warns, etc.)</p>
+                <ul>
+                    <li>Set the moderation logs to the current channel</li>
+                    <li class="color-blue">$settings edit modlogs here</li>
+                    <li>Set the moderation logs to the mentioned channel</li>
+                    <li class="color-blue">$settings edit modlogs #moderation</li>
+                    <li>Disable the moderation logs</li>
+                    <li class="color-blue">$settings edit modlogs disable</li>
+                </ul>
             </div>
         </div>
 
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Moderation Logs: Purge </h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Moderation</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message will be sent to the modlogs when messages are purged using the $purge command. (Requires moderation logs to be enabled)</p>
+                <ul>
+                    <li>Enable the purge message in the modlogs</li>
+                    <li class="color-blue">$settings edit modlogs-purge enable</li>
+                    <li>Disable the purge message in the modlogs</li>
+                    <li class="color-blue">$settings edit modlogs-purge disable</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link placeholder image -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Join Dm Message</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Logs</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A message that will be sent to the user in their dms when they join the server.
+                    Click [here] for a picture with all available placeholders
+                </p>
+                <ul>
+                    <li>Disable the message sent to users</li>
+                    <li class="color-blue">$settings edit automessage disable</li>
+                    <li>Set the message sent to users in dm on join</li>
+                    <li class="color-blue">$settings edit automessage Hey {user.name}! Please read our rules before typing!</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Automatic Nickname</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Nicknames</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A nickname to give to a user when they join the server</p>
+                <ul>
+                    <li>Disable the auto nickname setting</li>
+                    <li class="color-blue">$settings edit autonickname disable</li>
+                    <li>Set the nickname on join to newNickname in this case</li>
+                    <li class="color-blue">$settings edit autonickname newNickname</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Mode </h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - General</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">The mode sets which commands can be used.
+                    (free - All commands can be used. lite - All fun commands are disabled - Strict - Only moderation commands are enabled.)</p>
+                <ul>
+                    <li>Allow all commands to be used</li>
+                    <li class="color-blue">$settings edit mode free</li>
+                    <li>Disable fun commands</li>
+                    <li class="color-blue">$settings edit mode lite</li>
+                    <li>Disable all non-moderation comnmands</li>
+                    <li class="color-blue">$settings edit mode strict</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Custom Prefix</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Prefix</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Use a prefix other than $.</p>
+                <ul>
+                    <li>Change the custom prefix to !</li>
+                    <li class="color-blue">$settings edit customprefix !</li>
+                    <li>Disable the custom prefix</li>
+                    <li class="color-blue">$settings edit customprefix disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Default Prefix </h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Prefix</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">When a custom prefix is set, choose if you want to keep the default prefix.</p>
+                <ul>
+                    <li>Keep the default prefix working</li>
+                    <li class="color-blue">$settings edit defaultprefix enable</li>
+                    <li>Disable the default prefix</li>
+                    <li class="color-blue">$settings edit defaultprefix disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Anti-Invite</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Antiinvite</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Server moderation tool to delete any invites sent by users in the server.</p>
+                <ul>
+                    <li>Enable Discord server invite filtering</li>
+                    <li class="color-blue">$settings edit antiinvite enable</li>
+                    <li>Disable Discord server invite filtering</li>
+                    <li class="color-blue">$settings edit antiinvite disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Anti-Invite Action </h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Antiinvite</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Enable auto-warning and kicking when sending invites. Anti-Invite must be enabled for this to work.</p>
+                <ul>
+                    <li>Enable auto-warning & auto-kicking</li>
+                    <li class="color-blue">$settings edit antiinvite-action enable</li>
+                    <li>Disable auto-warning & auto-kicking</li>
+                    <li class="color-blue">$settings edit antiinvite-action disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Anti-Invite: Warn</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Antiinvite</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Server moderation tool to warn users that post invites in the server automatically.</p>
+                <ul>
+                    <li>The number specified is the amount of invites allowed to send before getting a warning</li>
+                    <li class="color-blue">$settings edit antiinvite-warn 2</li>
+                    <li>Disable the antiinvite warn setting</li>
+                    <li class="color-blue">$settings edit antiinvite-warn disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Anti-Invite: Kick Anti-Invite</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Antiinvite</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Server moderation tool to kick users that post invites in the server automatically. Cannot be less than the antiinvite-warn setting.</p>
+                <ul>
+                    <li>The number specified is the amount of invites allowed to send before getting kicked out of the server</li>
+                    <li class="color-blue">$settings edit antiinvite-kick 2</li>
+                    <li>Disable the antiinvite kick setting</li>
+                    <li class="color-blue">$settings edit antiinvite-kick disable</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: link to nickname command -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Disable Nickname Changing Nicknames</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Nicknames</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">A way to disable the use of the nickname command.</p>
+                <ul>
+                    <li>Disable the $nickname command</li>
+                    <li class="color-blue">$settings edit nonickname enable</li>
+                    <li>Enable the $nickname command</li>
+                    <li class="color-blue">$settings edit nonickname disable</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Default Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use all music commands.</p>
+                <ul>
+                    <li>Allow everyone to use all music commands</li>
+                    <li class="color-blue">$settings edit music-permissions all</li>
+                    <li>Allow djs to use all music commands</li>
+                    <li class="color-blue">$settings edit music-permissions dj</li>
+                    <li>Allow moderators to use all music commands</li>
+                    <li class="color-blue">$settings edit music-permissions moderator</li>
+                    <li>Allow administrators to use all music commands</li>
+                    <li class="color-blue">$settings edit music-permissions administrator</li>
+                </ul>
+            </div>
+        </div>
+        <!-- TODO: Link music permissions to default permissions -->
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Play Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the play command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-play off</li>
+                    <li>Allow everyone to use the play command</li>
+                    <li class="color-blue">$settings edit music-play all</li>
+                    <li>Allow djs to use the play command</li>
+                    <li class="color-blue">$settings edit music-play dj</li>
+                    <li>Allow moderators to use the play command</li>
+                    <li class="color-blue">$settings edit music-play moderator</li>
+                    <li>Allow administrators to use the play command</li>
+                    <li class="color-blue">$settings edit music-play administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Skip Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the skip command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-skip off</li>
+                    <li>Allow everyone to use the skip command</li>
+                    <li class="color-blue">$settings edit music-skip all</li>
+                    <li>Allow djs to use the skip command</li>
+                    <li class="color-blue">$settings edit music-skip dj</li>
+                    <li>Allow moderators to use the skip command</li>
+                    <li class="color-blue">$settings edit music-skip moderator</li>
+                    <li>Allow administrators to use the skip command</li>
+                    <li class="color-blue">$settings edit music-skip administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Pause Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the pause command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-pause off</li>
+                    <li>Allow everyone to use the pause command</li>
+                    <li class="color-blue">$settings edit music-pause all</li>
+                    <li>Allow djs to use the pause command</li>
+                    <li class="color-blue">$settings edit music-pause dj</li>
+                    <li>Allow moderators to use the pause command</li>
+                    <li class="color-blue">$settings edit music-pause moderator</li>
+                    <li>Allow administrators to use the pause command</li>
+                    <li class="color-blue">$settings edit music-pause administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Resume Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the resume command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-resume off</li>
+                    <li>Allow everyone to use the resume command</li>
+                    <li class="color-blue">$settings edit music-resume all</li>
+                    <li>Allow djs to use the resume command</li>
+                    <li class="color-blue">$settings edit music-resume dj</li>
+                    <li>Allow moderators to use the resume command</li>
+                    <li class="color-blue">$settings edit music-resume moderator</li>
+                    <li>Allow administrators to use the resume command</li>
+                    <li class="color-blue">$settings edit music-resume administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Unqueue Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the unqueue command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-unqueue off</li>
+                    <li>Allow everyone to use the unqueue command</li>
+                    <li class="color-blue">$settings edit music-unqueue all</li>
+                    <li>Allow djs to use the unqueue command</li>
+                    <li class="color-blue">$settings edit music-unqueue dj</li>
+                    <li>Allow moderators to use the unqueue command</li>
+                    <li class="color-blue">$settings edit music-unqueue moderator</li>
+                    <li>Allow administrators to use the unqueue command</li>
+                    <li class="color-blue">$settings edit music-unqueue administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Volume Permissions</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the required permission level for users to use the volume command. Overrides the music-permission setting when not set to off.</p>
+                <ul>
+                    <li>Default to the music default permission</li>
+                    <li class="color-blue">$settings edit music-volume off</li>
+                    <li>Allow everyone to use the volume command</li>
+                    <li class="color-blue">$settings edit music-volume all</li>
+                    <li>Allow djs to use the unqueue volume</li>
+                    <li class="color-blue">$settings edit music-volume dj</li>
+                    <li>Allow moderators to use the volume command</li>
+                    <li class="color-blue">$settings edit music-volume moderator</li>
+                    <li>Allow administrators to use the volume command</li>
+                    <li class="color-blue">$settings edit music-volume administrator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title">Music Time Limit</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - Music</h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the maximum time limit for a video (in seconds). Minimum is 120 seconds, maximum is 7200 seconds.</p>
+                <ul>
+                    <li>Set the time limit to the default</li>
+                    <li class="color-blue">$settings edit music-timelimit default</li>
+                    <li>Set the timelimit to 320 seconds</li>
+                    <li class="color-blue">$settings edit music-timelimit 320</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="command-title"><span class="color-blue">$</span>Music Queue Limit Music</h1>
+                </div>
+                <div class="column is-one-fifth">
+                    <h1 class="command-title color-blue">Settings - </h1><i class="fad fa-caret-square-down fa-2x fa-flip-vertical"></i>
+                </div>
+            </div>
+            <div class="extra-content">
+                <p class="description">Change the maximum queue limit. Maximum is 100 videos.</p>
+                <ul>
+                    <li>Set the queue limit to the default (10 songs)</li>
+                    <li class="color-blue">$settings edit music-queuelimit default</li>
+                    <li>Set the queue limit to 5 songs</li>
+                    <li class="color-blue">$settings edit music-queuelimit 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
-        <div class="footer">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-half">
-                        <h1 class="nav-title">TypicalBot</h1>
-                        <i class="fab fa-github-square fa-2x" onclick="window.location = 'https://www.github.com/typicalbot'"></i>
-                        <i class="fab fa-twitter-square fa-2x" onclick="window.location = 'https://www.twitter.com/Typical_Bot'"></i>
-                        <i class="fab fa-discord fa-2x" onclick="window.location = '/join-us'"></i>
-                        <i class="fab fa-reddit-square fa-2x" onclick="window.location = 'https://www.reddit.com/r/TypicalBot/'"></i>
-                    </div>
-                    <div class="column is-half" onclick="window.scrollTo(0, 0)">
-                        <span>Scroll to top</span>
-                    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half">
+                    <h1 class="nav-title">TypicalBot</h1>
+                    <i class="fab fa-github-square fa-2x" onclick="window.location = 'https://www.github.com/typicalbot'"></i>
+                    <i class="fab fa-twitter-square fa-2x" onclick="window.location = 'https://www.twitter.com/Typical_Bot'"></i>
+                    <i class="fab fa-discord fa-2x" onclick="window.location = '/join-us'"></i>
+                    <i class="fab fa-reddit-square fa-2x" onclick="window.location = 'https://www.reddit.com/r/TypicalBot/'"></i>
+                </div>
+                <div class="column is-half" onclick="window.scrollTo(0, 0)">
+                    <span>Scroll to top</span>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
