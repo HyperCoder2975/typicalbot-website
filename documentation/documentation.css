@@ -14,8 +14,12 @@ nav {
 .container.is-hidden-touch {
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+
+.outer .container.is-hidden-touch {
     text-align: center;
 }
+
 
 h1.nav-title {
     font-family: "Grobold", Arial;
@@ -315,6 +319,10 @@ body.darkmode .footer {
 .footer .container .column.is-half:first-of-type i.fa-twitter-square:hover {
     color: #1da1f2;
     transition: color .1s ease-in-out;
+}
+
+.footer .container .column.is-half:first-of-type i.fa-discord {
+    margin-top: 20.75px;
 }
 
 .footer .container .column.is-half:first-of-type i.fa-discord:hover {
