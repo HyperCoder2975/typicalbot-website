@@ -20,7 +20,6 @@ nav {
     text-align: center;
 }
 
-
 h1.nav-title {
     font-family: "Grobold", Arial;
     font-size: 40px;
@@ -220,16 +219,17 @@ h2.explore-more {
     transition: ease 2s all;
     color: white;
 }
+
 .gallery .promote-card.active .promote-button {
     transition: ease 2s all;
     transition-delay: .35s;
     color: transparent;
     background-color: transparent;
 }
+
 .gallery .promote-card.active .promote-button {
     background-color: #1976D2;
     color: white
-
 }
 
 .darkmode .gallery .promote-card.active .promote-button {
@@ -394,17 +394,17 @@ hr {
     flex-direction: row;
 }
 
-.row .column.is-one-fifth i.fa-caret-square-down {
+.row .column.is-one-fifth i.fa-caret-circle-down {
     margin-left: auto;
     margin-right: 0;
 }
 
-.row .column i.fa-caret-square-down::before {
+.row .column i.fa-caret-circle-down::before {
     opacity: 0.4 !important;
     color: #1976D2 !important;
 }
 
-.row .column i.fa-caret-square-down::after {
+.row .column i.fa-caret-circle-down::after {
     opacity: 1 !important;
     color: #1976D2 !important;
 }
@@ -412,6 +412,7 @@ hr {
 .command-title {
     font-size: 20px;
     margin-left: 2rem;
+    cursor: pointer;
 }
 
 .description {
@@ -427,13 +428,15 @@ hr {
     transition: max-height .25s ease-in-out
 }
 
-.row i.fa-caret-square-down {
-    transform: rotateX(0deg);
-    transition: transform .25s ease-in-out;
+.row i.fa-caret-circle-down {
+    cursor: pointer;
+    transform: rotateZ(0deg);
+    height:1em;
+    transition: transform .15s ease-in-out;
 }
 
-.row.selected i.fa-caret-square-down {
-    transform: rotateX(180deg);
+.row.selected i.fa-caret-circle-down {
+    transform: rotateZ(180deg);
 }
 
 .row.selected .extra-content {
@@ -463,4 +466,14 @@ body.darkmode {
 
 .darkmode .scroll {
     color: white;
+}
+
+.share-button.fad.fa-share-square {
+    margin-left: auto;
+    margin-right: 4px;
+    display: block;
+    width: 1em;
+    font-size: 1.4em;
+    color: #1976d2;
+    cursor:pointer;
 }
