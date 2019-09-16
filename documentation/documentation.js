@@ -1,4 +1,7 @@
 window.onload = function() {
+    if (document.cookie.indexOf("darkmode=") >= 0){
+        document.body.classList.add("darkmode")
+    }
     initClickEvents()
     onLocationChange()
     var clipboard = new ClipboardJS(".share-button");

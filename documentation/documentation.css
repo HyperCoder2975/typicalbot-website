@@ -292,6 +292,10 @@ body.darkmode .footer {
     transition: color .2s ease;
 }
 
+.darkmode .footer .container .column.is-half:first-of-type i {
+    color: white;
+}
+
 .footer .container .column.is-half:nth-of-type(2) {
     text-align: right;
     margin-top: 20px;
@@ -363,6 +367,10 @@ hr {
     margin-right: 20px;
 }
 
+.darkmode .tags {
+    color: white;
+}
+
 .tags .tag {
     margin-top: 0.4rem;
     margin-bottom: 0;
@@ -370,17 +378,26 @@ hr {
 
 .search {
     color: #1976D2;
-    opacity: 0.4
+    opacity: 1
 }
 
 .search input {
     border: none;
     font-size: 1em;
-    color: #1976D2
+    color: #1976D2;
+    background-color: transparent;
+}
+
+.darkmode .search input {
+    color: white;
 }
 
 .search i {
     opacity: 1;
+}
+
+.darkmode .row {
+    border-top: solid #1976D290 1px;
 }
 
 .row {
@@ -399,12 +416,22 @@ hr {
     margin-right: 0;
 }
 
-.row .column i.fa-caret-circle-down::before {
+:not(.darkmode) .row .column i.fa-caret-circle-down::before {
     opacity: 0.4 !important;
     color: #1976D2 !important;
 }
 
-.row .column i.fa-caret-circle-down::after {
+:not(.darkmode) .row .column i.fa-caret-circle-down::after {
+    opacity: 1 !important;
+    color: #1976D2 !important;
+}
+
+.darkmode .row .column i.fa-caret-circle-down::before {
+    opacity: .4 !important;
+    color: white !important;
+}
+
+.darkmode .row .column i.fa-caret-circle-down::after {
     opacity: 1 !important;
     color: #1976D2 !important;
 }
@@ -415,9 +442,17 @@ hr {
     cursor: pointer;
 }
 
+.darkmode .description {
+    color: white;
+}
+
 .description {
     color: black;
     opacity: 0.6;
+}
+
+.darkmode li:not(.color-blue) {
+    color: white;
 }
 
 .row .extra-content {
@@ -431,7 +466,7 @@ hr {
 .row i.fa-caret-circle-down {
     cursor: pointer;
     transform: rotateZ(0deg);
-    height:1em;
+    height: 1em;
     transition: transform .15s ease-in-out;
 }
 
@@ -475,5 +510,9 @@ body.darkmode {
     width: 1em;
     font-size: 1.4em;
     color: #1976d2;
-    cursor:pointer;
+    cursor: pointer;
+}
+
+.darkmode h1 {
+    color: white;
 }
